@@ -1,0 +1,40 @@
+.left-nav-bar-list {
+    gap: 7px;
+    margin: 13px 0 13px 35px;
+    .left-nav-bar-list-item-text {
+        font-size: 13px !important;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.left-menu-ref-info-m {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.left-nav-bar-block {
+    width: 325px;
+}
+
+.left-nav-bar-wrap { 
+    gap: 18px;
+}
+
+.left-nav-bar-account-enter-wrap {
+    margin: 35px 0 35px 15px;
+    width: 270px;
+    div{
+        p{
+            margin-bottom: 9px;
+
+        }
+    }
+    button {
+    border-radius: 40px !important;    
+    font-weight: bolder;
+    font-size: 13px;
+    padding: 10px 26px 10px 26px ;
+    margin-top: 5px;
+    }
+}
