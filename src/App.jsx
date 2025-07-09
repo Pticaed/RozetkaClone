@@ -1,11 +1,14 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom' // исправлено: 'react-router-dom', а не 'react-router'
 import './App.css'
-import { LeftbarMainPage } from './components/left-bar-mainpage/leftbar'
+import { MainNavBar } from './components/mainNavBar/mainNavBar'
 
 function App() {
   return (
-    <>
-      <LeftbarMainPage></LeftbarMainPage>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainNavBar />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

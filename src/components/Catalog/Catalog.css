@@ -1,0 +1,25 @@
+.default-block {
+  border: 0.5px solid #b1b1b1;
+  border-radius: 15px;
+}
+
+#divCatalog {
+  margin: auto auto;
+  width: 1700px;
+  height: 687px;
+  border-radius: 15px;
+  background-color: #DADADA;
+  padding: 20px;
+}
+#divCatalog div {
+  height: 100%;
+  background-color: white;
+  display: inline-block;
+  margin: 0 5px;
+}
+#divCatalog #leftDiv {
+  width: 300px;
+}
+#divCatalog #rightDiv {
+  width: 1322px;
+}/*# sourceMappingURL=Catalog.css.map */
