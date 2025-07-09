@@ -72,4 +72,22 @@
 
 .pb-26px {
   padding-bottom: 26px;
+}
+
+.fs-13px {
+  font-size: 13px;
+}
+
+.gap-21px {
+  gap: 21px;
+}
+
+.left-bar-line {
+  border-top: 0.5px solid #DADADA;
+  text-align: left;
+}
+
+.ml--30px {
+  margin-left: -30px;
+  width: 300px;
 }/*# sourceMappingURL=style.css.map */
