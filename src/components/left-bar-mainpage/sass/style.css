@@ -2,10 +2,15 @@
   gap: 7px;
   margin: 13px 0 13px 35px;
 }
-.left-nav-bar-list .left-nav-bar-list-item-text {
+
+.left-nav-bar-list-item-text {
   font-size: 13px !important;
   margin: 0;
   padding: 0;
+}
+
+.grey-text {
+  color: #898888;
 }
 
 .left-menu-ref-info-m {
@@ -34,4 +39,37 @@
   font-size: 13px;
   padding: 10px 26px 10px 26px;
   margin-top: 5px;
+}
+
+.ml-30px {
+  margin-left: 30px;
+}
+
+.line-spacing {
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.mb-40px {
+  margin-bottom: 40px;
+}
+
+.left-bar-heading {
+  font-weight: bolder;
+  font-size: 13px;
+  margin-bottom: 9px;
+}
+
+.left-bar-bottom-list-text {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.left-bar-bottom-list-text p {
+  margin: 0 !important;
+  font-size: 13px !important;
+}
+
+.pb-26px {
+  padding-bottom: 26px;
 }/*# sourceMappingURL=style.css.map */
