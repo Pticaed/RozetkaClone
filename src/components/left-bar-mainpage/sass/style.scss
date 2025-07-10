@@ -68,7 +68,8 @@ $grey-text-color: #898888;
     display: flex;
     flex-direction: column;
     gap: 7px;
-    p {
+    * {
+        color: #000;
         margin: 0 !important;
         font-size: 13px !important; 
     }
@@ -94,4 +95,19 @@ $grey-text-color: #898888;
 .ml--30px {
     margin-left: -30px;
     width: 300px;
+}
+
+.left-nav-bar-top-list {
+    * {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 7px;
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+.w-209px {
+    width: 209px;
 }
