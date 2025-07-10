@@ -23,7 +23,7 @@
   width: -moz-fit-content;
   width: fit-content;
 }
-#divCatalog div {
+#divCatalog > div {
   height: 100%;
   background-color: white;
   margin: 0 5px;
@@ -47,10 +47,56 @@
   margin: auto auto;
 }
 
-#backdropCatalog {
-  position: absolute;
-  z-index: 1040;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.507);
+#leftDiv #partLeftBarCatalog {
+  margin: 8px 0;
+  margin-left: 16px;
+  white-space: nowrap;
+}
+#leftDiv #partLeftBarCatalog * {
+  vertical-align: middle;
+  display: inline-block;
+}
+#leftDiv #partLeftBarCatalog a {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  margin: 0;
+  margin-left: 7px;
+}
+
+#rightDiv {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#rightDiv > div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0px 40px;
+  gap: 50px;
+}
+#rightDiv #brands {
+  display: flex;
+  align-items: center;
+}
+
+#partSectionCatalog {
+  margin-bottom: 20px;
+}
+#partSectionCatalog * {
+  white-space: nowrap;
+}
+#partSectionCatalog > * {
+  margin: 4px 0;
+}
+#partSectionCatalog #partSectionCatalogTitle {
+  font-size: 16px;
+  color: #98BE2A;
+}
+#partSectionCatalog a {
+  font-size: 14px;
+  display: block;
+  text-decoration: none;
+  color: black;
 }/*# sourceMappingURL=Catalog.css.map */

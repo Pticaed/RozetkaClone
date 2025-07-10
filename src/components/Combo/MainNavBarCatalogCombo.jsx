@@ -7,7 +7,7 @@ export function MainNavBarCatalogCombo()
     const [dialog, setDialog] = useState(true);
     return (
         <>
-            <MainNavBar setDialog={setDialog}  />
+            <MainNavBar dialog={dialog} setDialog={setDialog}  />
             <Catalog dialog={dialog} setDialog={setDialog} />
         </>
     )

@@ -37,7 +37,7 @@ export function MainNavBar(props)
             <nav id="mainNavBar">
                 <ImgLink id="burgerButton" img="/resourses/nav/BurgerButton.svg"/>
                 <ImgLink id="logo" img="/resourses/nav/logo_bazar.svg" />
-                <button onClick={() => props.setDialog(true)}><img src="/resourses/nav/iconCatalog.svg"></img><p>Каталог</p></button>
+                <button onClick={() => props.setDialog(!props.dialog)}><img src="/resourses/nav/iconCatalog.svg"></img><p>Каталог</p></button>
                 <SearchBar /> 
                 <div id="tryPremiumButton">
                     <p>Спробуйте</p>
