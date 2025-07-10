@@ -1,6 +1,8 @@
 #headerPromote {
+  position: relative;
+  z-index: 1061;
   background-color: #98BE2A;
-  width: 100;
+  width: 100%;
   font-size: 18px;
   padding: 5px;
   text-align: center;
@@ -17,6 +19,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+#mainNavBar * {
+  z-index: 1061;
 }
 #mainNavBar button {
   white-space: nowrap;

@@ -1,7 +1,6 @@
-import "./mainNavBar.css"
+import "./mainNavBar.scss"
 import { Link } from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import { Catalog } from "../Catalog/Catalog";
 
 
@@ -30,7 +29,7 @@ function ButtonNav(props)
 }
 
 
-export function MainNavBar()
+export function MainNavBar(props)
 {
     return (
         <header>
@@ -38,7 +37,7 @@ export function MainNavBar()
             <nav id="mainNavBar">
                 <ImgLink id="burgerButton" img="/resourses/nav/BurgerButton.svg"/>
                 <ImgLink id="logo" img="/resourses/nav/logo_bazar.svg" />
-                <button><img src="/resourses/nav/iconCatalog.svg"></img><p>Каталог</p></button>
+                <button onClick={() => props.setDialog(!props.dialog)}><img src="/resourses/nav/iconCatalog.svg"></img><p>Каталог</p></button>
                 <SearchBar /> 
                 <div id="tryPremiumButton">
                     <p>Спробуйте</p>
@@ -50,15 +49,5 @@ export function MainNavBar()
                 </div>
             </nav>
         </header>
-    )
-}
-
-export function MainNavBarCatalogCombo()
-{
-    return (
-        <>
-            <MainNavBar />
-            <Catalog />
-        </>
     )
 }

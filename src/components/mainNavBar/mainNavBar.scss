@@ -8,8 +8,10 @@ $marginLogo: percentFromPx(116);
 
 
 #headerPromote {
+    position: relative;
+    z-index: 1061;
     background-color: #98BE2A;
-    width: 100;
+    width: 100%;
     font-size: 18px;
     padding: 5px;
     text-align: center;
@@ -17,6 +19,9 @@ $marginLogo: percentFromPx(116);
     margin: 0;
 }
 #mainNavBar {
+    * {
+        z-index: 1061;
+    }
     background-color: #0B1245;
     height: 72px;
     width: 100%;

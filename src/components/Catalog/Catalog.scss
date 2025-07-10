@@ -1,18 +1,20 @@
 @import "../DefaultBlock.scss";
-
-
+@function percentFromPx($px) {
+  @return ($px * 100 / 1920) * 1%;
+}
 #divCatalog {
     margin: auto auto;
-    width: 1700px;
     height: 687px;
     border-radius: 15px;
     background-color: #DADADA;
     padding: 20px;
+    display: flexbox;
+    margin-top: 65px;
+    width: fit-content;
 
-    div {
+    > div {
         height: 100%;
         background-color: white;
-        display: inline-block;
         margin: 0 5px; 
     }
     #leftDiv {
@@ -20,5 +22,73 @@
     }
     #rightDiv {
         width: 1322px;
+    }
+}
+.modal-dialog {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-content {
+    border: none;
+    background-color: rgba(240, 248, 255, 0);
+    width: 1700px;
+    margin: auto auto;
+}
+
+
+#leftDiv {
+    #partLeftBarCatalog {
+        margin: 8px 0;
+        margin-left: 16px;
+        * {
+            vertical-align: middle;
+            display: inline-block;
+        }
+        white-space: nowrap;
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 12px;
+            margin: 0;
+            margin-left: 7px;
+        }
+    }
+}
+
+#rightDiv {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    > div {    
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0px 40px;
+        gap: 50px;
+    }
+    #brands {
+        display: flex;
+        align-items: center;
+    }
+}
+#partSectionCatalog {
+    margin-bottom: 20px;
+    * {
+        
+        white-space: nowrap;
+    }
+    > * {
+        margin: 4px 0;
+    }
+    #partSectionCatalogTitle {
+        font-size: 16px;
+        color: #98BE2A;
+    }
+    a {
+        font-size: 14px;
+        display: block;
+        text-decoration: none;
+        color: black;
     }
 }
