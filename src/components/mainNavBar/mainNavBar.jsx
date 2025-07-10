@@ -1,4 +1,4 @@
-import "./mainNavBar.css"
+import "./mainNavBar.scss"
 import { Link } from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Catalog } from "../Catalog/Catalog";
