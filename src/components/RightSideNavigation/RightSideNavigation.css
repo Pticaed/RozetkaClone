@@ -1,6 +1,6 @@
 #rightSideNavigation {
   color: white;
-  background-color: #0B1245;
+  background-color: #F5F5F5;
   box-shadow: 6px 5px 20px 0px rgba(0, 0, 0, 0.2509803922);
   width: 407px;
   height: 1415px;
@@ -10,6 +10,7 @@
 #rightSideNavigation #divRightSideNavigation__head {
   display: flex;
   height: 216px;
+  background-color: #0B1245;
   align-items: flex-end;
 }
 #rightSideNavigation #divRightSideNavigation__head #buttonCancel {
@@ -91,4 +92,31 @@
 }
 #rightSideNavigation #divRightSideNavigation__body .partRightNav {
   padding: 10px 21px;
+  margin-bottom: 10px;
+}
+#rightSideNavigation #divRightSideNavigation__body .divNavButtons {
+  position: relative;
+  padding: 20px 21px;
+}
+#rightSideNavigation #divRightSideNavigation__body .divNavButtons img {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  cursor: pointer;
+}
+#rightSideNavigation #divRightSideNavigation__body .divNavButtons h6 {
+  font-weight: bold;
+}
+#rightSideNavigation #divRightSideNavigation__body .divNavButtons div a {
+  margin: 3.5px 0;
+  color: black;
+  display: block;
+}
+#rightSideNavigation #divRightSideNavigation__body .left-nav-bar-block {
+  width: 100%;
+  margin-bottom: 10px;
+}
+#rightSideNavigation #divRightSideNavigation__body .left-nav-bar-block * {
+  color: black;
+  font-weight: bold;
 }/*# sourceMappingURL=RightSideNavigation.css.map */

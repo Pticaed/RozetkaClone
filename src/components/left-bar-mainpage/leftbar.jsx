@@ -2,43 +2,59 @@ import "../DefaultBlock.scss"
 import "./sass/style.scss"
 import { Link } from 'react-router-dom';
 
-function LeftBarBottomList() {
+export function LeftBarBottomList() {
     const help = [
-        "Доставка та оплата",
-        "Кредит",
-        "Гарантія",
-        "Повернення товару",
-        "Сервісні центри",
-        "Відстежити замовлення"
+        "Допомога", 
+        [
+            "Доставка та оплата",
+            "Кредит",
+            "Гарантія",
+            "Повернення товару",
+            "Сервісні центри",
+            "Відстежити замовлення"
+        ]
     ];
+
     const info = [
-        "Про нас",
-        "Умови використання сайту",
-        "Вакансії",
-        "Контакти"
+        "Інформація про компанію", 
+        [
+            "Про нас",
+            "Умови використання сайту",
+            "Вакансії",
+            "Контакти"
+        ]
     ];
+
     const services = [
-        "Бонусний рахунок",
-        "Premium",
-        "Подарункові сертифікати",
-        "Обмін",
-        "Rozetka Travel"
+        "Сервіси", 
+        [
+            "Бонусний рахунок",
+            "Premium",
+            "Подарункові сертифікати",
+            "Обмін",
+            "Rozetka Travel"
+        ]
     ];
+
     const partners = [
-        "Франчайзинг",
-        "Продавати на Розетці",
-        "Співпраця з нами"
+        "Партнерам", 
+        [
+            "Франчайзинг",
+            "Продавати на Розетці",
+            "Співпраця з нами"
+        ]
     ];
+
     return([help, info, services, partners]);
 }
 
-function LeftBarBottomItem(props) {
+export function LeftBarBottomItem(props) {
     return(
         <Link to="" className="text-decoration-none">{props.text}</Link>
     );
 }
 
-function LeftBarSocialMediaIcons() 
+export function LeftBarSocialMediaIcons() 
 {
     const path = "/resourses/left-bar-main/";
     const data = [
@@ -71,96 +87,94 @@ function PartLeftBarCatalog(props)
         </Link>
     )
 }
-
-export function LeftbarMainPage(props) {
-    const leftBar = PartLeftBarCatalogData();
+export function LeftBarDownloadAndSocial()
+{
     const socialNetworkIcons = LeftBarSocialMediaIcons();
-    const leftBarBottomList = LeftBarBottomList();
-    return(
-        <section id ="sidebar">
-    <div className="wrap-left-bar-main d-flex flex-column left-nav-bar-wrap">
-        <div className="default-block left-nav-bar-block">
-            <div className="d-flex flex-column left-nav-bar-list left-nav-bar-top-list">
-                    {leftBar.map((el,index) => (
-                        <PartLeftBarCatalog key={index} img={el[0]} text={el[1]} />
-                    ))}
-            </div>
-        </div>
-        <div className="default-block left-nav-bar-block">
-            <div className="d-flex flex-column left-nav-bar-list left-menu-ref-info-m ">
-                <Link to="" className="text-decoration-none">
-            <div className="left-bar-bottom-list-text flex-row align-items-center left-nav-bar-top-list"><img src="/resourses/left-bar-main/questionmark.svg" /><p className="left-nav-bar-list-item-text">Довідковий центр</p></div>
-            </Link>
-            </div>
-        </div>
-        <div className="default-block left-nav-bar-block ">
-            <div className="text-center left-nav-bar-account-enter-wrap d-flex flex-column">
-                <div>
-                    <p className="text-center fs-5">Ласкаво просимо!</p>
-                    <p className="text-center fs-13px line-spacing">Увійдіть, щоб отримувати рекомендації, персональні бонуси та знижки.</p>
-                </div>
-                <Link to=""><button className="default-green-btn">Увійдіть до особистого кабінету</button></Link>
-            </div>
-        </div>
-        <div className="default-block left-nav-bar-block d-flex flex-column pt-4 pb-4 ">
+    return <>
+        <div className="default-block left-nav-bar-block d-flex flex-column pt-4 pb-4">
             <p className="left-nav-bar-list-item-text grey-text ml-30px mb-3">Встановлюйте нашi додатки</p>
             <div className="d-flex gap-4 align-content-center ml-30px">
-                <Link to=""><img src="/resourses/left-bar-main/google-play.svg"/></Link>
-                <Link to=""><img src="/resourses/left-bar-main/app-store.svg"/></Link>
-                </div>
+                <Link to=""><img src="/resourses/left-bar-main/google-play.svg" /></Link>
+                <Link to=""><img src="/resourses/left-bar-main/app-store.svg" /></Link>
+            </div>
         </div>
-        <div className="default-block left-nav-bar-block pt-3 pb-3 ">
+
+        <div className="default-block left-nav-bar-block pt-3 pb-3">
             <p className="left-nav-bar-list-item-text grey-text ml-30px">Ми в соціальних мережах</p>
-        <div className="d-flex ml-30px gap-21px mt-3">
-            {socialNetworkIcons.map((el, index) => (
+            <div className="d-flex ml-30px gap-21px mt-3">
+                {socialNetworkIcons.map((el, index) => (
                     <LeftBarIcons key={index} img={el} />
-            ))}
+                ))}
             </div>
         </div>
-        <div className="default-block left-nav-bar-block ">
-        <div className="mt-3 ml-30px mb-40px">
-            <div className="pb-26px">
-            <h6 className="left-bar-heading">Допомога</h6>
-                <div className="left-bar-bottom-list-text">
-                    {leftBarBottomList.map((el, index) => (
-                        <LeftBarBottomItem key={index} text={el[0]} />
-                    ))}
-                </div>
-            </div>
-            <div className="pb-26px">
-            <h6 className="left-bar-heading">Інформація про компанію</h6>
-                <div className="left-bar-bottom-list-text">
-                    {leftBarBottomList.map((el, index) => (
-                        <LeftBarBottomItem key={index} text={el[1]} />
-                    ))}
-                </div>
-            </div> 
-            <div className="pb-26px">
-            <h6 className="left-bar-heading">Сервіси</h6>
-                <div className="left-bar-bottom-list-text">
-                    {leftBarBottomList.map((el, index) => (
-                        <LeftBarBottomItem key={index} text={el[2]} />
-                    ))}
-                </div>
-            </div>
-            <div className="pb-26px">
-            <h6 className="left-bar-heading">Партнерам</h6>
-                <div className="left-bar-bottom-list-text">
-                    {leftBarBottomList.map((el, index) => (
-                        <LeftBarBottomItem key={index} text={el[3]} />
-                    ))}
-                </div>
-            </div>
-            <div className="pb-26px">
-                <div className="left-bar-line ml--30px"></div>
-            </div>
-            <div className="d-flex w-209px justify-content-between">
-                <Link to=""><img src="/resourses/left-bar-main/mastercard-logo.svg"/></Link>
-                <Link to=""><img src="/resourses/left-bar-main/visa-logo.svg"/></Link>
-            </div>
-            </div>
-        </div>
-    </div>
-    </section>);
+    </>
 }
 
+export function LeftbarMainPage() {
+    const leftBar = PartLeftBarCatalogData();
+    const leftBarBottomList = LeftBarBottomList();
+
+    return (
+        <section id="sidebar">
+            <div className="wrap-left-bar-main d-flex flex-column left-nav-bar-wrap">
+
+                <div className="default-block left-nav-bar-block">
+                    <div className="d-flex flex-column left-nav-bar-list left-nav-bar-top-list">
+                        {leftBar.map((el, index) => (
+                            <PartLeftBarCatalog key={index} img={el[0]} text={el[1]} />
+                        ))}
+                    </div>
+                </div>
+
+                <div className="default-block left-nav-bar-block">
+                    <div className="d-flex flex-column left-nav-bar-list left-menu-ref-info-m">
+                        <Link to="" className="text-decoration-none">
+                            <div className="left-bar-bottom-list-text flex-row align-items-center left-nav-bar-top-list">
+                                <img src="/resourses/left-bar-main/questionmark.svg" />
+                                <p className="left-nav-bar-list-item-text">Довідковий центр</p>
+                            </div>
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="default-block left-nav-bar-block">
+                    <div className="text-center left-nav-bar-account-enter-wrap d-flex flex-column">
+                        <div>
+                            <p className="text-center fs-5">Ласкаво просимо!</p>
+                            <p className="text-center fs-13px line-spacing">
+                                Увійдіть, щоб отримувати рекомендації, персональні бонуси та знижки.
+                            </p>
+                        </div>
+                        <Link to="">
+                            <button className="default-green-btn">Увійдіть до особистого кабінету</button>
+                        </Link>
+                    </div>
+                </div>
+
+                <LeftBarDownloadAndSocial />
+
+                <div className="default-block left-nav-bar-block">
+                    <div className="mt-3 ml-30px mb-40px">
+                        {leftBarBottomList.map((el, index) => (
+                            <div key={index} className="pb-26px">
+                                <h6 className="left-bar-heading">{el[0]}</h6>
+                                <div className="left-bar-bottom-list-text">
+                                    {el[1].map((el1, subIndex) => (
+                                        <LeftBarBottomItem key={subIndex} text={el1} />
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                        <div className="pb-26px">
+                            <div className="left-bar-line ml--30px"></div>
+                        </div>
+                        <div className="d-flex w-209px justify-content-between">
+                            <Link to=""><img src="/resourses/left-bar-main/mastercard-logo.svg"/></Link>
+                            <Link to=""><img src="/resourses/left-bar-main/visa-logo.svg"/></Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
