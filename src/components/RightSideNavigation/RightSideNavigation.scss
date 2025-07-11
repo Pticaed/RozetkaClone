@@ -1,0 +1,103 @@
+#rightSideNavigation {
+    color: white;
+    background-color: #0B1245;
+    box-shadow: 6px 5px 20px 0px #00000040;
+    width: 407px;
+    height: 1415px;
+    position: absolute;
+    right: 0;
+
+    #divRightSideNavigation {   
+        &__head {
+            #buttonCancel {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+            }
+            display: flex;
+            height: 216px;
+            align-items: flex-end;
+            #AuthRegistrButtons {
+                margin-left: 30px;
+                margin-bottom: 40px;
+                > * {
+                    display: inline-block;
+                }
+                > img {
+                    width: 45px;
+                    margin-right: 20px;
+                }
+                > div {
+                    text-align: left;
+                    width: 60%;
+                    vertical-align: middle;
+                    span a {
+                        font-size: 18px;
+                        text-decoration: none;
+                        color: white;
+                    }
+                    p {
+                        margin: 0;
+                        font-size: 14px;
+                        color: #A1A1A1;
+                    }
+                }
+            }
+            
+        }
+        &__premiumAd {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #FFF84C;
+            color: black;
+            padding: 8px 32px;
+        }
+        &__divPremiumAd {
+            vertical-align: middle;
+            display: inline-block;
+            p {
+                margin: 0;
+            }
+            #textPremiumAd {
+                font-size: 18px;
+                font-weight: bold;
+            }
+            #descPremiumAd {
+                font-size: 12px;
+            }
+        }
+
+        &__body {
+            color: black;
+            background-color: #F5F5F5;
+            padding: 27px;
+            text-align: left;
+            #firstPartBody {
+                margin: 12px 0;
+                font-size: 14px;
+                > * {
+                    display: inline-block;
+                }
+                p {
+                    margin: 0;
+                }
+                img {
+                    margin-right: 14px;
+                }
+                .catalogProduct {
+                    margin-left: -5px;
+                    margin-right: 8px;
+                }
+            
+
+            }
+            .partRightNav {
+                padding: 10px 21px;
+            }
+
+        }
+    }
+
+}

@@ -1,0 +1,94 @@
+#rightSideNavigation {
+  color: white;
+  background-color: #0B1245;
+  box-shadow: 6px 5px 20px 0px rgba(0, 0, 0, 0.2509803922);
+  width: 407px;
+  height: 1415px;
+  position: absolute;
+  right: 0;
+}
+#rightSideNavigation #divRightSideNavigation__head {
+  display: flex;
+  height: 216px;
+  align-items: flex-end;
+}
+#rightSideNavigation #divRightSideNavigation__head #buttonCancel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+#rightSideNavigation #divRightSideNavigation__head #AuthRegistrButtons {
+  margin-left: 30px;
+  margin-bottom: 40px;
+}
+#rightSideNavigation #divRightSideNavigation__head #AuthRegistrButtons > * {
+  display: inline-block;
+}
+#rightSideNavigation #divRightSideNavigation__head #AuthRegistrButtons > img {
+  width: 45px;
+  margin-right: 20px;
+}
+#rightSideNavigation #divRightSideNavigation__head #AuthRegistrButtons > div {
+  text-align: left;
+  width: 60%;
+  vertical-align: middle;
+}
+#rightSideNavigation #divRightSideNavigation__head #AuthRegistrButtons > div span a {
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+}
+#rightSideNavigation #divRightSideNavigation__head #AuthRegistrButtons > div p {
+  margin: 0;
+  font-size: 14px;
+  color: #A1A1A1;
+}
+#rightSideNavigation #divRightSideNavigation__premiumAd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFF84C;
+  color: black;
+  padding: 8px 32px;
+}
+#rightSideNavigation #divRightSideNavigation__divPremiumAd {
+  vertical-align: middle;
+  display: inline-block;
+}
+#rightSideNavigation #divRightSideNavigation__divPremiumAd p {
+  margin: 0;
+}
+#rightSideNavigation #divRightSideNavigation__divPremiumAd #textPremiumAd {
+  font-size: 18px;
+  font-weight: bold;
+}
+#rightSideNavigation #divRightSideNavigation__divPremiumAd #descPremiumAd {
+  font-size: 12px;
+}
+#rightSideNavigation #divRightSideNavigation__body {
+  color: black;
+  background-color: #F5F5F5;
+  padding: 27px;
+  text-align: left;
+}
+#rightSideNavigation #divRightSideNavigation__body #firstPartBody {
+  margin: 12px 0;
+  font-size: 14px;
+}
+#rightSideNavigation #divRightSideNavigation__body #firstPartBody > * {
+  display: inline-block;
+}
+#rightSideNavigation #divRightSideNavigation__body #firstPartBody p {
+  margin: 0;
+}
+#rightSideNavigation #divRightSideNavigation__body #firstPartBody img {
+  margin-right: 14px;
+}
+#rightSideNavigation #divRightSideNavigation__body #firstPartBody .catalogProduct {
+  margin-left: -5px;
+  margin-right: 8px;
+}
+#rightSideNavigation #divRightSideNavigation__body .partRightNav {
+  padding: 10px 21px;
+}/*# sourceMappingURL=RightSideNavigation.css.map */

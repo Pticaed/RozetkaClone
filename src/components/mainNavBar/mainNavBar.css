@@ -27,7 +27,6 @@
   white-space: nowrap;
   display: inline-block;
   background-color: #98BE2A;
-  padding: 2px px;
   color: black;
   border: none;
   line-height: 100%;
@@ -81,7 +80,7 @@
 #searchBar button {
   height: 100%;
   border-radius: 0px 20px 20px 0px;
-  padding: 5px;
+  padding: 5px 10px;
 }
 
 #tryPremiumButton {
