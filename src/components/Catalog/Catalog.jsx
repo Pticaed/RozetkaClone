@@ -5,7 +5,7 @@ import { Modal } from "react-bootstrap"
 
 
 
-function PartLeftBarCatalogData()
+export function PartLeftBarCatalogData()
 {
     const path = "/resourses/left-bar-main/";
     let leftBarData = [
