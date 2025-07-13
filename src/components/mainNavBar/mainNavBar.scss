@@ -19,9 +19,6 @@ $marginLogo: percentFromPx(116);
     margin: 0;
 }
 #mainNavBar {
-    * {
-        z-index: 1061;
-    }
     background-color: #0B1245;
     height: 72px;
     width: 100%;
@@ -30,6 +27,10 @@ $marginLogo: percentFromPx(116);
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
+    * {
+        z-index: 1061;
+    }
 
     button {
         white-space: nowrap;

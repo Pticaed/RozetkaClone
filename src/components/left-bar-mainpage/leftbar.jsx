@@ -1,6 +1,7 @@
 import "../DefaultBlock.scss"
 import "./sass/style.scss"
 import { Link } from 'react-router-dom';
+import { PartLeftBarCatalogData } from "../Catalog/Catalog";
 
 export function LeftBarBottomList() {
     const help = [
@@ -75,33 +76,6 @@ function LeftBarIcons(props)
         <img src={props.img}></img>
     </Link>
     );
-}
-
-function PartLeftBarCatalogData()
-{
-    const path = "/resourses/left-bar-main/";
-    let leftBarData = [
-        ["computer", "Ноутбуки та комп'ютери"],
-        ["phone", "Смартфони, ТВ та електроніка"],
-        ["gamepad", "Товари для геймерів"],
-        ["washing-machine", "Побутова техніка"],
-        ["sofa", "Товари для дому"],
-        ["instrument", "Інструменти та автотовари"],
-        ["shower", "Сантехніка та ремонт"],
-        ["garden", "Дача, сад та город"],
-        ["sport-ball", "Спорт та захоплення"],
-        ["clothes", "Одяг, взуття та прикраси"],
-        ["beauty-and-health", "Краса і здоров'я"],
-        ["puzzle", "Дитячі товари"],
-        ["paws", "Зоотовари"],
-        ["books", "Канцтовари та книги"],
-        ["alcohol", "Алкогольні напоі та продукти"],
-        ["code", "Товари для бізнесу та послуги"],
-        ["relax", "Тури та відпочинок"],
-        ["sales", "Акції"],
-        ["total-sale", "Тотальний розпродаж"]
-    ];
-    return leftBarData.map(([icon, label]) => [path + icon + ".svg", label]);
 }
 
 function PartLeftBarCatalog(props)
