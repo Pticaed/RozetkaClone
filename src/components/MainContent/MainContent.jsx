@@ -1,67 +1,17 @@
-import {Button, Carousel} from "react-bootstrap";
-import {useState} from "react";
+import {Button} from "react-bootstrap";
 import {ProductCard} from "./ProductCard.jsx";
-
 
 import "./MainContent.scss"
 import {DefaultSwiper} from "./DefaultSwiper.jsx";
+import data from "/src/assets/products.json"
+import {Banner} from "./Banner.jsx";
 
 export function MainContent() {
-  const [index, setIndex] = useState(0);
-
-  function handleSelect(selectedIndex) {
-    setIndex(selectedIndex);
-  }
-
-  function switchLeft() {
-    let nextIndex;
-
-    if (index === 0) {
-      nextIndex = 2;
-    } else {
-      nextIndex = index - 1;
-    }
-
-    setIndex(nextIndex);
-  }
-
-  function switchRight() {
-    let nextIndex;
-
-    if (index === 2) {
-      nextIndex = 0;
-    } else {
-      nextIndex = index + 1;
-    }
-
-    setIndex(nextIndex);
-  }
-
   return (
     <>
       <section id="banner">
         <div className="container-fluid d-flex flex-column" id="banner-container">
-          <div className="container-fluid d-flex">
-            <button className="styleless-button arrow-left" onClick={switchLeft}>
-              <img src="/resourses/maincontent/carouselArrowLeft.svg" alt="arrowLeft"/>
-            </button>
-            <div className="carousel-container">
-              <Carousel activeIndex={index} onSelect={handleSelect} controls={false}>
-                <Carousel.Item>
-                  <img className="img-fluid" src="/resourses/maincontent/bannerSamsungGalaxy.png" alt="banner"/>
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img className="img-fluid" src="/resourses/maincontent/bannerSamsungGalaxy.png" alt="banner"/>
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img className="img-fluid" src="/resourses/maincontent/bannerSamsungGalaxy.png" alt="banner"/>
-                </Carousel.Item>
-              </Carousel>
-            </div>
-            <button className="styleless-button arrow-right" onClick={switchRight}>
-              <img src="/resourses/maincontent/carouselArrowRight.svg" alt="arrowRight"/>
-            </button>
-          </div>
+          <Banner img="/resourses/maincontent/bannerSamsungGalaxy.png"/>
           <Button id="show-all-sales" className="white-button" variant="light" href="#">
             <p>Всі акції</p>
             <p className="light-gray">1036</p>
@@ -109,7 +59,7 @@ export function MainContent() {
       <section id="now-browsing">
         <div className="container-fluid d-flex flex-column" id="now-browsing-container">
           <p className="fs-18 fw-medium pb-3">Зараз шукають</p>
-          <DefaultSwiper/>
+          <DefaultSwiper slides={data.products} slidesPerView={5}/>
         </div>
       </section>
     </>

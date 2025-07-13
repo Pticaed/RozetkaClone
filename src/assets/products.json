@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "type": "normal-adaptive-product-card default-width-product-card",
+      "img": "/resourses/maincontent/appleIphone2.png",
+      "title": "Мобільний телефон Apple iPhone 13 Pro Max 256 GB Sierra Blue",
+      "previousPrice": "47 499",
+      "price": "46 499",
+      "priceStyle": "discount",
+      "pending": true
+    },
+    {
+      "type": "normal-adaptive-product-card default-width-product-card",
+      "img": "/resourses/maincontent/ps5.png",
+      "title": "Ігрова приставка PS5 PlayStation 5 Digital Edition",
+      "price": "17 899"
+    },
+    {
+      "type": "normal-adaptive-product-card default-width-product-card",
+      "img": "/resourses/maincontent/philipsCoffeeMachine.png",
+      "title": "Кавомашина PHILIPS Series 2200 EP2235/40",
+      "price": "17 499",
+      "priceStyle": "discount"
+    },
+    {
+      "type": "normal-adaptive-product-card default-width-product-card",
+      "img": "/resourses/maincontent/dyson.png",
+      "title": "Фен Dyson Supersonic HD03 (фуксія)",
+      "price": "14 490"
+    },
+    {
+      "type": "normal-adaptive-product-card default-width-product-card",
+      "img": "/resourses/maincontent/samsungTablet.png",
+      "title": "Планшет Samsung Galaxy Tab S8 Ultra 5G 12/256 GB Graphite",
+      "price": "43 999"
+    },
+    {
+      "type": "normal-adaptive-product-card default-width-product-card",
+      "img": "/resourses/maincontent/philipsCoffeeMachine.png",
+      "title": "Кавомашина PHILIPS Series 2200 EP2235/40",
+      "price": "17 499",
+      "priceStyle": "discount",
+      "pending": true
+    }
+  ]
+}
