@@ -7,6 +7,14 @@ export function ProductCard(props) {
     priceStyle = props.priceStyle;
   }
 
+  let largeCurrencySymbol = '₴', smallCurrencySymbol = '₴';
+  if (props.previousPrice === undefined) {
+    smallCurrencySymbol = '';
+  }
+  if (props.price === undefined) {
+    largeCurrencySymbol = '';
+  }
+
   let likeButton, likeButtonViewBox;
   let likeButtonDimensions = {};
   if (props.type === "large-adaptive-product-card") {
@@ -55,11 +63,11 @@ export function ProductCard(props) {
         <p className="title">{props.title}</p>
         <span className="d-flex align-content-end">
           <p className="previous-price">{props.previousPrice !== undefined ? props.previousPrice : ''}</p>
-          <p className="small-currency-symbol">₴</p>
+          <p className="small-currency-symbol">{smallCurrencySymbol}</p>
         </span>
         <span className="d-flex align-items-end">
           <p className={"price " + priceStyle}>{props.price}</p>
-          <p className={"large-currency-symbol " + priceStyle}>₴</p>
+          <p className={"large-currency-symbol " + priceStyle}>{largeCurrencySymbol}</p>
         </span>
         <p className="pending">{props.pending !== undefined ? "Очікується" : ""}</p>
       </div>
