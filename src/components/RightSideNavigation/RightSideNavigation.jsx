@@ -1,5 +1,5 @@
 import { Link } from "react-router"
-import "./RightSideNavigation.css"
+import "./RightSideNavigation.scss"
 import "../left-bar-mainpage/sass/style.scss"
 import { LeftBarBottomList, LeftBarBottomItem, LeftBarDownloadAndSocial, LeftBarSocialMediaIcons } from "../left-bar-mainpage/leftbar"
 import { useState } from "react"
@@ -58,7 +58,7 @@ export function RightSideNavigation(props)
                         <img src="/resourses/nav/accButton.svg"></img>
                         <div>
                             <span>
-                                <Link>Вхід</Link> | <Link>Рєстрація</Link>
+                                <Link onClick={() => props.setRegForm(true)}>Вхід</Link> | <Link onClick={() => props.setAuthForm(true)}>Рєстрація</Link>
                             </span>
                             <p>Авторизуйтесь для отримання розширених можливостей</p>
                         </div>

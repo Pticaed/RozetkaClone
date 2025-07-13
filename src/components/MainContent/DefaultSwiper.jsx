@@ -49,7 +49,8 @@ export function DefaultSwiper({slidesPerView, slides}) {
                     title={slide.title}
                     previousPrice={slide.previousPrice}
                     price={slide.price}
-                    priceStyle={slide.priceStyle}/>
+                    priceStyle={slide.priceStyle}
+                    pending={slide.pending}/>
                 </SwiperSlide>)
       })}
       {/*<SwiperSlide>*/}

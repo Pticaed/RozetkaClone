@@ -24,17 +24,18 @@
         width: 1322px;
     }
 }
-.modal-dialog {
-  display: flex;
-  justify-content: center;
+.catalog >.modal-dialog {
+    display: flex;
+    justify-content: center;
+    
+    .modal-content {
+        border: none;
+        background-color: rgba(240, 248, 255, 0);
+        width: 1700px;
+        margin: auto auto;
+    }
 }
 
-.modal-content {
-    border: none;
-    background-color: rgba(240, 248, 255, 0);
-    width: 1700px;
-    margin: auto auto;
-}
 
 
 #leftDiv {
