@@ -1,0 +1,41 @@
+#banner-container {
+  max-width: 1489px;
+}
+
+.light-gray {
+  color: lightgray;
+}
+
+.white-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+}
+
+.white-button#show-all-sales {
+  margin-top: 20px;
+  margin-right: 1rem;
+  height: 44px;
+  max-width: 200px;
+  gap: 8px;
+  border: 0.5px solid #a6a5a5 !important;
+  border-radius: 41px !important;
+  margin-left: auto;
+
+  p {
+    font-size: 12px;
+  }
+}
+
+#banner {
+  .arrow-left {
+    margin-right: 24px;
+  }
+
+  .arrow-right {
+    margin-left: 24px;
+  }
+}

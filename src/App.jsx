@@ -10,7 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HouseholdApps />} />
+        <Route path="/" element="" />
       </Routes>
     </BrowserRouter>
   )
