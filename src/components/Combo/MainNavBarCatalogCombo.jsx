@@ -13,7 +13,7 @@ export function MainNavBarCatalogCombo()
             <MainNavBar setDisplay={setDisplay} dialog={dialog} setDialog={setDialog}  />
             <Catalog dialog={dialog} setDialog={setDialog} />
             <RightSideNavigation setDisplay={setDisplay} display={display} /> 
-            <LeftbarMainPage />
+            {/* <LeftbarMainPage /> */}
         </>
     )
 }

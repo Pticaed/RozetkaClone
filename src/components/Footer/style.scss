@@ -1,9 +1,11 @@
 $input-border: #A6A5A5;
 $sub-text-color: #98BE2A;
 $footer-sub: #0B1245;
-footer { 
-    position: sticky;
+footer {    
     bottom: 0;
+    div {
+        background-color: #fff;
+    }
 }
 
 .wrap-main-footer {

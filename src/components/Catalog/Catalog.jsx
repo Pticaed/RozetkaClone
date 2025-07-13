@@ -1,6 +1,6 @@
 // import { useState } from "react"
 import { Link } from "react-router";
-import "./Catalog.css"
+import "./Catalog.scss"
 import { Modal } from "react-bootstrap"
 
 

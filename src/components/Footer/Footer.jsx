@@ -73,8 +73,10 @@ export function Footer(props) {
         <footer>
                 <div className="footer">
                     <SubscribeBar />
+                    <div>
                     <MainFooter />
                     <BottomFooter />
+                    </div>
                 </div>
         </footer>
     );

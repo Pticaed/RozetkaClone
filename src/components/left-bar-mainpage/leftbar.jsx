@@ -1,6 +1,7 @@
 import "../DefaultBlock.scss"
 import "./sass/style.scss"
 import { Link } from 'react-router-dom';
+import { PartLeftBarCatalogData } from "../Catalog/Catalog";
 
 export function LeftBarBottomList() {
     const help = [
