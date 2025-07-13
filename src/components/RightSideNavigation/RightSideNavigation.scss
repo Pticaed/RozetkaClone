@@ -1,6 +1,6 @@
 #rightSideNavigation {
     color: white;
-    background-color: #0B1245;
+    background-color: #F5F5F5;
     box-shadow: 6px 5px 20px 0px #00000040;
     width: 407px;
     height: 1415px;
@@ -17,6 +17,7 @@
             }
             display: flex;
             height: 216px;
+            background-color: #0B1245;
             align-items: flex-end;
             #AuthRegistrButtons {
                 margin-left: 30px;
@@ -90,13 +91,40 @@
                     margin-left: -5px;
                     margin-right: 8px;
                 }
-            
-
             }
             .partRightNav {
                 padding: 10px 21px;
+                margin-bottom: 10px;
             }
-
+            .divNavButtons {
+                position: relative;
+                padding: 20px 21px;
+                img {
+                    position: absolute;
+                    right: 20px;
+                    top: 25px;
+                    cursor: pointer;
+                }
+                h6 {
+                    font-weight: bold;
+                }
+                div {
+                    a {
+                        margin: 3.5px 0;
+                        color: black;
+                        display: block;
+                    }
+                }
+            }
+            .left-nav-bar-block {
+                width: 100%;
+                margin-bottom: 10px;
+                * {
+                    color: black;
+                    font-weight: bold;
+                }
+                
+            }
         }
     }
 

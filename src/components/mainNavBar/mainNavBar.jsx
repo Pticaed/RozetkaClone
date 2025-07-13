@@ -44,7 +44,7 @@ export function MainNavBar(props)
                     <button>PREMIUM</button>
                 </div>
                 <div id="buttonsNav">
-                    <ButtonNav id="accButton" event={null} img="/resourses/nav/accButton.svg"/>
+                    <ButtonNav id="accButton" event={() => props.setDisplay("block")} img="/resourses/nav/accButton.svg"/>
                     <ButtonNav id="basket"event={null} img="/resourses/nav/basket.svg"/>
                 </div>
             </nav>
