@@ -2,6 +2,7 @@ import {Carousel} from "react-bootstrap";
 import {useState} from "react";
 
 import "./Banner.scss"
+import "./NullifiedElements.scss"
 
 export function Banner(props) {
   const [index, setIndex] = useState(0);
