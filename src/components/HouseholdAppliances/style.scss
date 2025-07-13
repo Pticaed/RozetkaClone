@@ -16,6 +16,8 @@
 }
 
 .household-main-content {
+    min-width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     gap: 45px;
@@ -24,15 +26,20 @@
 .household-categories-card {
     width: 350px;
     height: 550px;
-    padding: 3% 23px 1.5% 30px;
+    padding: 8% 23px 1.5% 30px;
     box-sizing: border-box;
     overflow: hidden;
     transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
         h2 {
             font-weight: bolder;
             font-size: 18px;
             margin-bottom: 12px;
             margin-top: 10%;
+        }
+        img {
+            align-self: center;
         }
         .categories-card-text {
             text-decoration: none;
@@ -58,5 +65,6 @@
     h2{
         font-weight: bolder;
         font-size: 18px;    
+        margin-bottom: 1rem !important;
     }
 }

@@ -3,7 +3,12 @@ import { MainNavBarCatalogCombo } from '../Combo/MainNavBarCatalogCombo';
 import { Footer } from '../Footer/Footer';
 import "../DefaultBlock.scss"
 import './style.scss'
+import data from "/src/assets/household-products.json";
 import { DefaultSwiper } from '../MainContent/DefaultSwiper';
+import { Banner } from '../MainContent/Banner';
+import "../MainContent/NullifiedElements.scss"
+import "../MainContent/Banner.scss"
+import "../MainContent/ProductCard.scss"
 
 function GetLogos() {
     const path = "/resourses/householdApps/companyLogos/";
@@ -88,16 +93,25 @@ export function HouseholdApps()
     <div className='household-wrap'>
         <h1>Побутова техніка</h1>
         <div className='household-main-content'>
+            <section id="banner">
+            <Banner img="/resourses/householdApps/banner.png"/>
+            </section>
+            <section id="companies">
             <div className='wrap-company-logos'>
             <ShowLogos props={companyLogos} />
             </div>
+            </section>
+            <section id="categories">
             <div className='household-categories-container'>
                 <CreateCategoryCards />
             </div>
-            <div className='household-popular'>
+            </section>
+            <section id="popular">
+            <div className='household-popular container-fluid'>
                 <h2>Популярні товари</h2>
-                <DefaultSwiper />
+                <DefaultSwiper slides={data.products} slidesPerView={6}/>
             </div>
+            </section>
         </div>
     </div>
     <Footer />
