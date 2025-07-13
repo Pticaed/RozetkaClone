@@ -41,7 +41,7 @@ export function DefaultSwiper({slidesPerView, slides}) {
             }}
             loop={true}
             slidesPerView={slidesPerView}>
-      {slides.map((slide, index) => {
+      {slides.map((slide) => {
         return (<SwiperSlide>
                   <ProductCard
                     type={slide.type}
