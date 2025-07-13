@@ -1,15 +1,11 @@
 @function percentFromPx($px) {
   @return ($px * 100 / 1920) * 1%;
 }
-
-
 $marginLogo: percentFromPx(116);
-
-
 
 #headerPromote {
     position: relative;
-    z-index: 1061;
+    z-index: 3000;
     background-color: #98BE2A;
     width: 100%;
     font-size: 18px;
@@ -19,17 +15,18 @@ $marginLogo: percentFromPx(116);
     margin: 0;
 }
 #mainNavBar {
-    * {
-        z-index: 1061;
-    }
     background-color: #0B1245;
-    height: 72px;
+    height: 62px;
     width: 100%;
     margin: auto auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
+    * {
+        z-index: 3000;
+    }
 
     button {
         white-space: nowrap;

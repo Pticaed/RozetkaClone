@@ -1,0 +1,194 @@
+$heightRightSide: 65px;
+
+.form-backdrop {
+    z-index: 1063;
+}
+
+.formReg {
+    .modal-content {
+        height: auto !important;
+    }
+    .modal-body {
+        > img, .rightPartAuthForm {
+            align-self:self-start !important;
+        }
+        > img {
+            margin-top: $heightRightSide !important;
+        }
+        .rightPartAuthForm {
+            margin-top: #{$heightRightSide + 35px} !important;
+        }
+    }
+    .descForm  {
+        padding-left: 10px;
+        white-space: wrap;
+        display: inline-block;
+        margin: 0;
+        margin-top: 5px !important;
+        font-size: 11px !important;
+        color: #898888;
+    }
+    .divButton > .descForm {
+        padding-left: 0px !important;
+    }
+    .divButton {
+        p {
+            padding-bottom: 5px;
+        }
+        text-align: center;
+    }
+    .leftPartAuthForm {
+        > div {
+            margin: 10px 0;
+        }
+    }
+    .divInputsForm {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;   
+        > div { 
+            margin: 0 !important;
+        }
+    }
+    #divOfInputForm {
+        margin: 0 !important;
+    }
+}
+
+.form  {
+
+    margin-top: 150px;
+    z-index: 1064;
+    .modal-body {
+        > img, .rightPartAuthForm {
+            align-self:center;
+        }
+    }
+    .leftPartAuthForm {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        > div {
+            padding: 0 15px;
+        }
+        p { 
+            font-size: 24px;
+            margin: 0;
+        }
+        button {
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            width: 100%;
+            border-radius: 41px;
+            border: none;
+            padding: 10px 0;
+            background-color: #98BE2A;
+        }
+        .registrButton {
+            display: inline-block;
+            margin: 0 auto;
+            color: #3E77AA;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        
+    }
+    .rightPartAuthForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+        > p {
+            font-size: 14px;
+            margin-left: 15px;
+            margin-bottom: 5px;;  
+            color: #898888;  
+        }
+        #buttonAuthReg {
+            p {
+                margin: 0;
+                display: inline-block;
+            }
+            img {
+                margin: 5px;
+            }
+            margin: 10px 0;
+            padding: 4px 0;
+            background-color: white;
+            border: 0.5px solid #A6A5A580;
+            border-radius: 80px;
+            color: #3E77AA;
+            display: block;
+        }
+    }
+    .modal-body {
+        display: flex;
+        flex-direction: row;
+    }
+    .modal-content {     
+        background-color: #F5F5F5; 
+        width: 670px;
+        height: 360px;
+        border-radius: 15px;
+        border: none;
+    }
+    .divForgotPassword {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        label {
+            font-size: 12px;
+            * {
+                vertical-align: middle;
+                margin-right: 10px;
+                margin-bottom: 2px;
+            }
+        }
+        a {
+            text-decoration: none;
+            font-size: 12px;
+        }
+        p {
+            margin: 0;
+            margin-left: 5px;
+        }
+    }
+    #divOfInputForm {
+        margin: 20px 0;
+        p {
+            font-size: 12px;
+            margin: 0;
+            left: 40px;
+            position: absolute;
+            color: #FE4343;
+        }
+        #inputForm {
+            img, input {
+                margin-right: 10px;
+            }
+            > img {
+                cursor: pointer;
+            }
+            > input {
+                flex: 1;
+                margin-left: 10px;
+                outline: none;
+                border: none;
+                width: 80%;
+                height: 100%;
+                border-radius: 20px;
+                font-size: 12px;
+            }
+            display: flex;
+            align-items: center;
+            background-color: white;
+            width: 340px;
+            height: 40px;
+            border: 0.5px solid gray;
+            border-radius: 20px;
+        }
+    }
+}

@@ -2,8 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom' // исправ�
 import './App.css'
 import { MainNavBarCatalogCombo } from './components/Combo/MainNavBarCatalogCombo'
 
-
-
 function App() {
   return (
     <BrowserRouter>

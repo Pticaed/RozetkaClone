@@ -1,6 +1,6 @@
 // import { useState } from "react"
 import { Link } from "react-router";
-import "./Catalog.css"
+import "./Catalog.scss"
 import { Modal } from "react-bootstrap"
 
 
@@ -178,7 +178,7 @@ export function Catalog(props)
     const leftBar = PartLeftBarCatalogData();
     return (
         <>
-            <Modal show={props.dialog} onHide={() => props.setDialog(false)} backdrop={true}>
+            <Modal className="catalog" show={props.dialog} onHide={() => props.setDialog(false)} backdrop={true}>
                 <Modal.Body>
                     <div id="divCatalog" className="d-flex">
                         <div id="leftDiv" className="default-block">

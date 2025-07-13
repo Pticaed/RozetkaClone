@@ -6,3 +6,6 @@
   font-weight: 400;
   font-size: medium;
 }
+::-webkit-scrollbar {
+  display: none;
+}
