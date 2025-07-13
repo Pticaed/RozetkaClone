@@ -1,6 +1,6 @@
 import { MainNavBar } from "../mainNavBar/mainNavBar"
 import { Catalog } from "../Catalog/Catalog"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { RightSideNavigation } from "../RightSideNavigation/RightSideNavigation";
 import { LeftbarMainPage } from "../left-bar-mainpage/leftbar";
 import { FormAuthorization, FormRegistration } from "../Forms/Forms";
@@ -29,9 +29,10 @@ export function MainNavBarCatalogCombo()
         <>
             <MainNavBar setDisplay={changeDisplay} dialog={dialog} setDialog={setDialog}  />
             <Catalog dialog={dialog} setDialog={setDialog} />
-            <RightSideNavigation setDisplay={setDisplay} display={display} />
-            
+            <RightSideNavigation setDisplay={setDisplay} display={display} setRegForm={setAuthForm} setAuthForm={setRegForm} /> 
             <LeftbarMainPage />
+            {isForms.auth && <FormAuthorization vision={isForms.auth} setVision={setAuthForm} setVisionOtherForm={setRegForm} />}
+            {isForms.reg && <FormRegistration vision={isForms.reg} setVision={setRegForm} setVisionOtherForm={setAuthForm} />}
         </>
     )
 }
