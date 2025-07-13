@@ -29,10 +29,9 @@ export function MainNavBarCatalogCombo()
         <>
             <MainNavBar setDisplay={changeDisplay} dialog={dialog} setDialog={setDialog}  />
             <Catalog dialog={dialog} setDialog={setDialog} />
-            <RightSideNavigation setDisplay={setDisplay} display={display} setRegForm={setAuthForm} setAuthForm={setRegForm} /> 
+            <RightSideNavigation setDisplay={setDisplay} display={display} />
+            
             <LeftbarMainPage />
-            {isForms.auth && <FormAuthorization vision={isForms.auth} setVision={setAuthForm} setVisionOtherForm={setRegForm} />}
-            {isForms.reg && <FormRegistration vision={isForms.reg} setVision={setRegForm} setVisionOtherForm={setAuthForm} />}
         </>
     )
 }

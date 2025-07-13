@@ -1,50 +1,15 @@
-@import "NullifiedElements";
+@use "NullifiedElements";
+@use "Banner";
+@use "Sales";
+@use "ProductCard";
 
-#banner-container {
-  max-width: 1489px;
+.fs-18 {
+  font-size: 18px;
 }
 
-.light-gray {
-  color: lightgray;
-}
-
-.white-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  background-color: white;
-  border: 0.5px solid #a6a5a5 !important;
-  border-radius: 41px !important;
-  max-width: 200px;
-  width: 100%;
-  height: 44px;
-  gap: 8px;
-
-  p {
-    font-size: 12px;
-  }
-
+#now-browsing-container {
+  max-width: 1445px;
 
 }
 
-.white-button#show-all-sales {
-  margin-top: 20px;
-  margin-right: 1rem;
-}
-
-#banner {
-  .arrow-left {
-    margin-right: 24px;
-  }
-
-  .arrow-right {
-    margin-left: 24px;
-  }
-}
-
-//.carousel-container {
-//  max-width: 1423px;
-//}
 

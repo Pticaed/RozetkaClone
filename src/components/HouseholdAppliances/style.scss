@@ -1,0 +1,16 @@
+.household-wrap {
+    padding: 30px 55px;
+    h1 {
+        margin-bottom: 20px;
+        font-weight: bolder;
+        font-size: 36px;
+
+    }
+}
+
+.wrap-company-logos {
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

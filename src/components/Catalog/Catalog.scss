@@ -1,4 +1,4 @@
-@import "../DefaultBlock.scss";
+@use "../DefaultBlock.scss";
 @function percentFromPx($px) {
   @return ($px * 100 / 1920) * 1%;
 }
