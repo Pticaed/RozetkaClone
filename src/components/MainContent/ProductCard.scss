@@ -61,12 +61,12 @@ $previous-price-line-height: 36px;
   padding: 25px 25px 5px 25px;
 
   .image-container {
-    flex: 2 1 auto;
+    flex: 2;
   }
 
   .body {
     margin: 0 25px;
-    flex: 1 1 auto;
+    flex: 1;
   }
 
   .previous-price {
@@ -104,12 +104,12 @@ $previous-price-line-height: 36px;
   padding: 9px 9px 5px 9px;
 
   .image-container {
-    flex: 0 1 auto;
+    flex: 2;
   }
 
   .body {
     margin: 0 8px;
-    flex: 1 1 auto;
+    flex: 1;
   }
 
   .title {
