@@ -1,0 +1,21 @@
+.errorpage-wrap {
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 38px;
+    p {
+        margin-bottom: 10px;
+        font-weight: bolder;
+        font-size: 32px;
+        text-align: center;
+
+    }
+    button {
+        padding: 16px 40px;
+        * {
+            font-weight: bolder;
+        }
+    }
+}
