@@ -19,7 +19,7 @@ export function DefaultSwiper({slidesPerView, slides}) {
             }}
             breakpoints={{
               1200: {
-                slidesPerView: 5,
+                slidesPerView: slidesPerView,
                 spaceBetween: 10
               },
               768: {
@@ -39,8 +39,7 @@ export function DefaultSwiper({slidesPerView, slides}) {
                 spaceBetween: 5
               }
             }}
-            loop={true}
-            slidesPerView={slidesPerView}>
+            loop={true}>
       {slides.map((slide) => {
         return (<SwiperSlide>
                   <ProductCard
