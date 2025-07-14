@@ -1,15 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom' // исправлено: 'react-router-dom', а не 'react-router'
 import './App.css'
-import { MainNavBarCatalogCombo } from './components/Combo/MainNavBarCatalogCombo'
-
-
+import {MainPage} from "./components/MainPage/MainPage.jsx";
 
 
 function App() {
   return (
-     <BrowserRouter>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MainNavBarCatalogCombo />} />
+        <Route path="/" element={<MainPage/>} />
       </Routes>
     </BrowserRouter>
   )
