@@ -4,7 +4,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    section {
+    padding: 50px 30px;
+    max-width: 1900px;
+    margin: 0 auto;
+    > section {
         margin-bottom: 45px;
     }
     .mainTitlePage {
@@ -35,13 +38,18 @@
         margin: 0;
     }
     .productsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    justify-content: center;
-    max-width: #{6 * 295px + 5 * 8px};
-    width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: start;
+        width: fit-content;
     }
+    .productsBlockWrapper {
+        margin: 0 auto;
+        display: inline-block;
+        justify-content: center;
+    }
+    
     .productCard {
         text-decoration: none;
         color: black;

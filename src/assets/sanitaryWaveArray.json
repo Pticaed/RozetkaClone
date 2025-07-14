@@ -35,7 +35,7 @@
     { "title": "Обладнання", "img": "Equipment" },
     { "title": "Електроінструмент", "img": "Power_Tools" }
   ],
-   "lighting": [
+   "lightning": [
     { "title": "Настільні лампи", "img": "desk_lamps" },
     { "title": "Лампи", "img": "bulbs" },
     { "title": "Бра і настінно-стельові світильники", "img": "wall_ceiling_lights" },
@@ -60,13 +60,12 @@
   "building_materials": [
     { "title": "Будівельні матеріали", "img": "building_materials" },
     { "title": "Покрівля водостік", "img": "roofing_and_gutters" },
-    { "title": "Пароізоляція", "img": "vapor_barrier" },
+    { "title": "Гідроізоляція", "img": "vapor_barrier" },
     { "title": "Ґрунтовка", "img": "primer" },
-    { "title": "Оздобні матеріали", "img": "finishing_materials" },
+    { "title": "Обробні матеріали", "img": "finishing_materials" },
     { "title": "Будівельна хімія", "img": "construction_chemicals" },
-
-    { "title": "Затирочні суміші", "img": "grout_mixtures" },
-    { "title": "Покрівля водостік", "img": "roofing_and_gutters" },
+    { "title": "Затиральні суміші", "img": "grout_mixtures" },
+    { "title": "Покрівля водостік", "img": "roofing"},
     { "title": "Дерево і пиломатеріали", "img": "wood_and_lumber" },
     { "title": "Вікна та двері", "img": "windows_and_doors" },
     { "title": "Оргскло", "img": "plexiglass" },

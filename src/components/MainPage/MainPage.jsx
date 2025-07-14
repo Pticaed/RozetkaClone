@@ -8,7 +8,6 @@ import {Footer} from "../Footer/Footer.jsx";
 export function MainPage() {
   return (
     <>
-      <MainNavBarCatalogCombo/>
       <main>
         <div className="d-flex" id="main-page">
           <LeftbarMainPage/>
