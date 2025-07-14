@@ -30,6 +30,12 @@
     },
     {
       "type": "normal-adaptive-product-card default-width-product-card",
+      "img": "/resourses/maincontent/dyson.png",
+      "title": "Фен Dyson Supersonic HD03 (фуксія)",
+      "price": "14 490"
+    },
+    {
+      "type": "normal-adaptive-product-card default-width-product-card",
       "img": "/resourses/maincontent/samsungTablet.png",
       "title": "Планшет Samsung Galaxy Tab S8 Ultra 5G 12/256 GB Graphite",
       "price": "43 999"
