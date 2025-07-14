@@ -1,0 +1,75 @@
+{
+  "plumbing": [
+    { "title": "Кераміка", "img": "Ceramics" },
+    { "title": "Меблі для ванної кімнати", "img": "Bathroom_Furniture" },
+    { "title": "Ванни", "img": "Bathtubs" },
+    { "title": "Змішувачі", "img": "Faucets" },
+    { "title": "Інсталяційні системи", "img": "Installation_Systems" },
+    { "title": "Рушникосушники і радіатори", "img": "Towel_Warmers_and_Radiators" },
+
+    { "title": "Кухонні мийки", "img": "Kitchen_Sinks" },
+    { "title": "Кухонні змішувачі", "img": "Kitchen_Faucets" },
+    { "title": "Подрібнювачі харчових відходів", "img": "Food_Waste_Disposers" },
+    { "title": "Аксесуари до кухонних мийок", "img": "Kitchen_Sink_Accessories" },
+    { "title": "Системи вентиляції", "img": "Ventilation_Systems" },
+    { "title": "Сифони", "img": "Siphons" },
+
+    { "title": "Аксесуари для ванної кімнати", "img": "Bathroom_Accessories" },
+    { "title": "Душові гарнітури", "img": "Shower_Sets" },
+    { "title": "Душові кабіни, стінки, двері і перегородки", "img": "Shower_Cabins_Panels_Doors_and_Partitions" },
+    { "title": "Душові піддони", "img": "Shower_Trays" },
+    { "title": "Гідромасажні бокси", "img": "Hydromassage_Boxes" },
+    { "title": "Шторки для ванни та душу", "img": "Bath_and_Shower_Curtains" },
+
+    { "title": "Гідромасажні ванни", "img": "Whirlpool_Baths" },
+    { "title": "Басейни SPA", "img": "SPA_Pools" },
+    { "title": "Комплектуючі", "img": "Components" },
+    { "title": "Інженерна сантехніка", "img": "Engineering_Plumbing" },
+    { "title": "Тепла підлога", "img": "Underfloor_Heating" },
+    { "title": "Засоби герметизації", "img": "Sealing_Products" },
+
+    { "title": "Контрольно-вимірювальні прилади", "img": "Measuring_Instruments" },
+    { "title": "Фільтри для води", "img": "Water_Filters" },
+    { "title": "Системи безпеки розумного будинку", "img": "Smart_Home_Security_Systems" },
+    { "title": "Трапи", "img": "Floor_Drains" },
+    { "title": "Обладнання", "img": "Equipment" },
+    { "title": "Електроінструмент", "img": "Power_Tools" }
+  ],
+   "lighting": [
+    { "title": "Настільні лампи", "img": "desk_lamps" },
+    { "title": "Лампи", "img": "bulbs" },
+    { "title": "Бра і настінно-стельові світильники", "img": "wall_ceiling_lights" },
+    { "title": "Люстри", "img": "chandeliers" },
+    { "title": "Технічне освітлення", "img": "technical_lighting" },
+    { "title": "Нічники", "img": "night_lights" },
+
+    { "title": "Вуличне освітлення", "img": "outdoor_lighting" },
+    { "title": "Прожектори", "img": "floodlights" },
+    { "title": "Точкові світильники", "img": "spotlights" },
+    { "title": "Торшери", "img": "floor_lamps" },
+    { "title": "Фурнітура та комплектуючі для освітлення", "img": "lighting_fittings_accessories" },
+    { "title": "Світлодіодна стрічка", "img": "led_strip" },
+
+    { "title": "Датчики освітлення", "img": "light_sensors" },
+    { "title": "Трекове освітлення", "img": "track_lighting" },
+    { "title": "Розумне освітлення", "img": "smart_lighting" },
+    { "title": "Датчики руху", "img": "motion_sensors" },
+    { "title": "Електромонтажне обладнання", "img": "electrical_installation_equipment" },
+    { "title": "Клінінгове обладнання", "img": "cleaning_equipment" }
+  ],
+  "building_materials": [
+    { "title": "Будівельні матеріали", "img": "building_materials" },
+    { "title": "Покрівля водостік", "img": "roofing_and_gutters" },
+    { "title": "Пароізоляція", "img": "vapor_barrier" },
+    { "title": "Ґрунтовка", "img": "primer" },
+    { "title": "Оздобні матеріали", "img": "finishing_materials" },
+    { "title": "Будівельна хімія", "img": "construction_chemicals" },
+
+    { "title": "Затирочні суміші", "img": "grout_mixtures" },
+    { "title": "Покрівля водостік", "img": "roofing_and_gutters" },
+    { "title": "Дерево і пиломатеріали", "img": "wood_and_lumber" },
+    { "title": "Вікна та двері", "img": "windows_and_doors" },
+    { "title": "Оргскло", "img": "plexiglass" },
+    { "title": "Паркані та огорожі", "img": "fences_and_barriers" }
+  ]
+}
