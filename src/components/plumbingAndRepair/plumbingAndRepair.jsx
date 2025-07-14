@@ -21,6 +21,21 @@ function ProductCard(props)
         </Link>
     )
 }
+function SectionProducts(props)
+{
+    return (
+        <section id="sanitaryWaveSection">
+            <div className="productsBlockWrapper">
+                <p className="titleSection">Сантехника</p>
+                <div className="productsContainer">
+                    {props.data.array.map(el => (
+                        <ProductCard img={`${props.data.path}${el.img}.svg`} title={el.title} />
+                    ))}
+                </div>
+            </div>
+        </section>
+    )
+}
 export function PlumbingAndRepairPage()
 {
     const sanitaryWaveData = arrayData(data.plumbing, "/resourses/plumbingAndRepair/plumbing/");
@@ -32,36 +47,9 @@ export function PlumbingAndRepairPage()
                 <p className="mainTitlePage">Сантехніка та ремонт</p>
                 <Banner img={"/resourses/plumbingAndRepair/plumbingAndRepairImgCarousel.svg"} />
             </section>
-            <section id="sanitaryWaveSection">
-                <div className="productsBlockWrapper ">
-                    <p className="titleSection">Сантехника</p>
-                    <div className="productsContainer">
-                        {sanitaryWaveData.array.map(el => (
-                            <ProductCard img={`${sanitaryWaveData.path}${el.img}.svg`} title={el.title} />
-                        ))}
-                    </div>
-                </div>
-            </section>
-            <section id="sanitaryWaveSection">
-                <div className="productsBlockWrapper ">
-                    <p className="titleSection">Освітлення</p>
-                    <div className="productsContainer">
-                        {sanitaryWaveData.array.map(el => (
-                            <ProductCard img={`${sanitaryWaveData.path}${el.img}.svg`} title={el.title} />
-                        ))}
-                    </div>
-                </div>
-            </section>
-            <section id="sanitaryWaveSection">
-                <div className="productsBlockWrapper ">
-                    <p className="titleSection">Сантехника</p>
-                    <div className="productsContainer">
-                        {sanitaryWaveData.array.map(el => (
-                            <ProductCard img={`${sanitaryWaveData.path}${el.img}.svg`} title={el.title} />
-                        ))}
-                    </div>
-                </div>
-            </section>
+            <SectionProducts data={sanitaryWaveData} />
+            <SectionProducts data={lightningData} />
+            <SectionProducts data={buildingMaterialsData}/>
         </div>
     )
 }

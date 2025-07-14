@@ -3,6 +3,7 @@
   @return ($px * 100 / 1920) * 1%;
 }
 #divCatalog {
+    z-index: 1051;
     margin: auto auto;
     height: 687px;
     border-radius: 15px;

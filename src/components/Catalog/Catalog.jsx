@@ -2,33 +2,40 @@
 import { Link } from "react-router";
 import "./Catalog.scss"
 import { Modal } from "react-bootstrap"
+import { HouseholdApps } from "../HouseholdAppliances/Household";
+import { PlumbingAndRepairPage } from "../plumbingAndRepair/plumbingAndRepair";
 
 
+
+export function CategoriesData()
+{
+    return [
+        ["computer", "Ноутбуки та комп'ютери", null],
+        ["phone", "Смартфони, ТВ та електроніка", null],
+        ["gamepad", "Товари для геймерів", null],
+        ["washing-machine", "Побутова техніка", <HouseholdApps />],
+        ["sofa", "Товари для дому", null],
+        ["instrument", "Інструменти та автотовари", null],
+        ["shower", "Сантехніка та ремонт", <PlumbingAndRepairPage />],
+        ["garden", "Дача, сад та город", null],
+        ["sport-ball", "Спорт та захоплення", null],
+        ["clothes", "Одяг, взуття та прикраси", null],
+        ["beauty-and-health", "Краса і здоров'я", null],
+        ["puzzle", "Дитячі товари", null],
+        ["paws", "Зоотовари", null],
+        ["books", "Канцтовари та книги", null],
+        ["alcohol", "Алкогольні напоі та продукти", null],
+        ["code", "Товари для бізнесу та послуги", null],
+        ["relax", "Тури та відпочинок", null],
+        ["sales", "Акції", null],
+        ["total-sale", "Тотальний розпродаж", null]
+    ];
+}
 
 export function PartLeftBarCatalogData()
 {
     const path = "/resourses/left-bar-main/";
-    let leftBarData = [
-        ["computer", "Ноутбуки та комп'ютери"],
-        ["phone", "Смартфони, ТВ та електроніка"],
-        ["gamepad", "Товари для геймерів"],
-        ["washing-machine", "Побутова техніка"],
-        ["sofa", "Товари для дому"],
-        ["instrument", "Інструменти та автотовари"],
-        ["shower", "Сантехніка та ремонт"],
-        ["garden", "Дача, сад та город"],
-        ["sport-ball", "Спорт та захоплення"],
-        ["clothes", "Одяг, взуття та прикраси"],
-        ["beauty-and-health", "Краса і здоров'я"],
-        ["puzzle", "Дитячі товари"],
-        ["paws", "Зоотовари"],
-        ["books", "Канцтовари та книги"],
-        ["alcohol", "Алкогольні напоі та продукти"],
-        ["code", "Товари для бізнесу та послуги"],
-        ["relax", "Тури та відпочинок"],
-        ["sales", "Акції"],
-        ["total-sale", "Тотальний розпродаж"]
-    ];
+    let leftBarData = CategoriesData();
     return leftBarData.map(([icon, label]) => [path + icon + ".svg", label]);
 }
 function PartLeftBarCatalog(props)
@@ -36,7 +43,7 @@ function PartLeftBarCatalog(props)
     return (
         <div id="partLeftBarCatalog">
             <img src={props.img}></img>
-            <Link to="">{props.text}</Link>
+            <Link to={props.to}>{props.text}</Link>
         </div>
     )
 }
@@ -175,7 +182,7 @@ export function Catalog(props)
         return null
     }
     const categories = PartRightSectionCatalogData();
-    const leftBar = PartLeftBarCatalogData();
+    const leftBar = CategoriesData();
     return (
         <>
             <Modal className="catalog" show={props.dialog} onHide={() => props.setDialog(false)} backdrop={true}>
@@ -183,7 +190,7 @@ export function Catalog(props)
                     <div id="divCatalog" className="d-flex">
                         <div id="leftDiv" className="default-block">
                             {leftBar.map((el,index) => (
-                                <PartLeftBarCatalog key={index} img={el[0]} text={el[1]} />
+                                <PartLeftBarCatalog key={index} img={`/resourses/left-bar-main/${el[0]}.svg`} text={el[1]} to={`/categories/${el[0]}`} />
                             ))}
                         </div>
                         <div id="rightDiv" className="default-block">

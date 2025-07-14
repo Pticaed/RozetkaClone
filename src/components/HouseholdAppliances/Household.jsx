@@ -89,7 +89,6 @@ export function HouseholdApps()
 {
     const companyLogos = GetLogos();
     return(<>
-    <MainNavBarCatalogCombo />
     <div className='household-wrap'>
         <h1>Побутова техніка</h1>
         <div className='household-main-content'>

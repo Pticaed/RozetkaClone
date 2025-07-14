@@ -2,6 +2,7 @@ import "../DefaultBlock.scss"
 import "./sass/style.scss"
 import { Link } from 'react-router-dom';
 import { PartLeftBarCatalogData } from "../Catalog/Catalog";
+import { ErrorPage } from "../ErrorPage/ErrorPage";
 
 export function LeftBarBottomList() {
     const help = [
@@ -80,7 +81,8 @@ function LeftBarIcons(props)
 
 function PartLeftBarCatalog(props)
 {
-    return (<Link to="">
+    let page = props.to === undefined ? "*" : props.to;
+    return (<Link to={page}>
         <div id="left-nav-bar-list-item-text d-flex">
             <img src={props.img}></img>
             <p className="fs-13px">{props.text}</p>

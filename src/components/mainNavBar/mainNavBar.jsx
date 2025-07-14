@@ -7,7 +7,7 @@ import { Catalog } from "../Catalog/Catalog";
 function ImgLink(props)
 {
     return (
-        <Link id={props.id}>
+        <Link id={props.id} to={props.to}>
             <img src={props.img}></img>
         </Link>
     )
@@ -36,7 +36,7 @@ export function MainNavBar(props)
             <p id="headerPromote">ТОТАЛЬНИЙ РОЗПРОДАЖ ДО -50%</p>
             <nav id="mainNavBar">
                 <ImgLink id="burgerButton" img="/resourses/nav/BurgerButton.svg"/>
-                <ImgLink id="logo" img="/resourses/nav/logo_bazar.svg" />
+                <ImgLink id="logo" img="/resourses/nav/logo_bazar.svg" to="/" />
                 <button onClick={() => props.setDialog(!props.dialog)}><img src="/resourses/nav/iconCatalog.svg"></img><p>Каталог</p></button>
                 <SearchBar /> 
                 <div id="tryPremiumButton">
