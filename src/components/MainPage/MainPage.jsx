@@ -11,12 +11,12 @@ export function MainPage() {
       <main>
         <div className="d-flex" id="main-page">
           <LeftbarMainPage/>
-          <div>
+          <div className="px-3">
             <MainContent/>
           </div>
         </div>
       </main>
-      <Footer/>
+      {/*<Footer/>*/}
     </>
   );
 }

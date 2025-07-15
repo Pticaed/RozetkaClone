@@ -1,0 +1,62 @@
+$pink: #F3A4A4;
+$blue: #86CBE9;
+
+#best-presents {
+  margin-bottom: 45px;
+}
+
+#best-presents-container {
+  max-width: 1445px;
+}
+
+.present-banner {
+  display: flex;
+  padding: 20px 50px 40px 30px;
+  max-width: 717px;
+  height: 300px;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 12px;
+  color: white;
+
+  .description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex: 2;
+  }
+
+  .image-container {
+    flex: 1;
+  }
+
+  .title {
+    margin-right: auto;
+    font-weight: 500;
+  }
+
+  .caption {
+    font-family: "Days One", sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+  }
+
+  .white-button#go-to {
+    //margin-right: 5%;
+    max-width: 140px;
+    border-radius: 32px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+}
+
+.present-banner#pink {
+  background-color: $pink;
+  border-color: $pink;
+}
+
+.present-banner#blue {
+  background-color: $blue;
+  border-color: $blue;
+}

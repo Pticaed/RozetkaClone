@@ -41,7 +41,7 @@ export function Banner(props) {
   }
 
   return (
-    <div className="container-fluid d-flex">
+    <div className="container-fluid d-flex px-0">
       <button className="styleless-button arrow-left" style={showArrows} onClick={switchLeft}>
         <img src="/resourses/maincontent/carouselArrowLeft.svg" alt="arrowLeft"/>
       </button>

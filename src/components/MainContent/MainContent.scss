@@ -1,12 +1,28 @@
 @use "Sales";
 @use "ProductCard";
+@use "BestPresents";
+@use "MostAwaited";
 
 .fs-18 {
   font-size: 18px;
 }
 
+#now-browsing {
+  margin-bottom: 45px;
+}
+
 #now-browsing-container {
   max-width: 1445px;
 }
+
+#recommendations {
+  margin-bottom: 45px;
+}
+
+#recommendations-container {
+  max-width: 1445px;
+}
+
+
 
 
