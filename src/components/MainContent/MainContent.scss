@@ -1,12 +1,46 @@
 @use "Sales";
 @use "ProductCard";
+@use "BestPresents";
+@use "MostAwaited";
 
 .fs-18 {
   font-size: 18px;
 }
 
+.section-caption {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+
+#now-browsing {
+  margin-bottom: 45px;
+}
+
 #now-browsing-container {
   max-width: 1445px;
 }
+
+#recommendations {
+  margin-bottom: 45px;
+}
+
+#recommendations-container {
+  max-width: 1445px;
+}
+
+@media screen and (width <= 768px) {
+  .section-caption {
+    font-size: 14px;
+    font-weight: bolder;
+    padding-bottom: 0.5rem;
+  }
+
+  #banner, #sales, #now-browsing, #recommendations {
+    margin-bottom: 20px;
+  }
+}
+
 
 

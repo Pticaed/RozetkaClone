@@ -69,6 +69,10 @@ $previous-price-line-height: 36px;
     flex: 1;
   }
 
+  .title {
+    font-weight: bold;
+  }
+
   .previous-price {
     font-size: 18px;
     text-decoration: line-through;
@@ -115,6 +119,7 @@ $previous-price-line-height: 36px;
   .title {
     height: auto;
     font-size: 12px;
+    font-weight: bold;
   }
 
   .previous-price {

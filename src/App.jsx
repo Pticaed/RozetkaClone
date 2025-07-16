@@ -13,7 +13,10 @@ function App() {
         <Route path="/" element={<MainNavBarCatalogCombo />}>
           <Route path="/" element={<MainPage />} />
           {data.map(el => (
-            <Route path={`/categories/${el[0]}`} element={el[2]} /> 
+            <Route
+              path={`/categories/${el[0]}`}
+              element={el[2] === null ? <ErrorPage/> : el[2]}
+              errorElement={<ErrorPage/>}/>
           ))}
           <Route path="*" element={<ErrorPage />} />
         </Route>

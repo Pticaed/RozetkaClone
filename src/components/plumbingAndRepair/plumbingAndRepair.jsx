@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./plumbingAndRepair.scss"
-import { MainCarousel } from "../MainCarousel/Carousel";
 import "../MainContent/MainContent.scss";
 import { Banner } from "../MainContent/Banner";
 import data from "/src/assets/sanitaryWaveArray.json"
