@@ -2,7 +2,7 @@ $grey-text-color: #898888;
 
 .left-nav-bar-list {
   gap: 7px;
-  margin: 13px 0 13px 35px;
+
 
 }
 
@@ -22,7 +22,8 @@ $grey-text-color: #898888;
 }
 
 .left-nav-bar-block {
-  width: 325px;
+  //padding: 13px 0 13px 35px;
+  padding: 13px 30px;
 }
 
 .left-nav-bar-wrap {
@@ -30,8 +31,9 @@ $grey-text-color: #898888;
 }
 
 .left-nav-bar-account-enter-wrap {
-  margin: 35px 0 35px 15px;
-  width: 270px;
+  //margin: 35px 0 35px 15px;
+  height: 200px;
+  justify-content: center;
 
   div {
     p {
@@ -55,7 +57,7 @@ $grey-text-color: #898888;
 
 .line-spacing {
   line-height: 100%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
 }
 
 .mb-40px {
@@ -97,11 +99,6 @@ $grey-text-color: #898888;
   text-align: left;
 }
 
-.ml--30px {
-  margin-left: -30px;
-  width: 300px;
-}
-
 .left-nav-bar-top-list {
   * {
     margin: 0;
@@ -111,8 +108,4 @@ $grey-text-color: #898888;
     text-decoration: none;
     color: #000;
   }
-}
-
-.w-209px {
-  width: 209px;
 }

@@ -113,8 +113,13 @@
     gap: 5px;
 
     .large-adaptive-product-card#p1 {
+      height: 288.5px;
       grid-column: 1 / span 2;
       grid-row: 1;
+
+      .image-container {
+        margin: 0 25%;
+      }
     }
 
     .normal-adaptive-product-card#p2 {

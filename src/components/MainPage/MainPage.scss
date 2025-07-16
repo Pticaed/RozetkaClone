@@ -1,8 +1,47 @@
+header {
+  position: sticky;
+  top: 0;
+}
+
 #sidebar {
   max-width: 325px;
 }
 
 #main-page {
-  padding: 1.8rem;
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+  width: 100%;
+  padding: 1.8rem 0;
   justify-content: center;
+
+  * {
+    min-width: 0;
+  }
+
+  #main-content-container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (width <= 1564px) {
+  #sidebar {
+    display: none;
+  }
+}
+
+@media screen and (width <= 768px) {
+  #main-page, #main-content-container {
+    padding: 0 !important;
+  }
+
+  #banner {
+    padding-bottom: 1rem;
+  }
+
+  #sales, #now-browsing, #recommendations {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
 }

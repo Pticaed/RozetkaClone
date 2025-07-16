@@ -1,17 +1,15 @@
 import {LeftbarMainPage} from "../left-bar-mainpage/leftbar.jsx";
 import {MainContent} from "../MainContent/MainContent.jsx";
-import {MainNavBarCatalogCombo} from "../Combo/MainNavBarCatalogCombo.jsx";
 
 import "./MainPage.scss"
-import {Footer} from "../Footer/Footer.jsx";
 
 export function MainPage() {
   return (
     <>
       <main>
-        <div className="d-flex" id="main-page">
+        <div className="d-flex container-fluid" id="main-page">
           <LeftbarMainPage/>
-          <div className="px-3">
+          <div id="main-content-container">
             <MainContent/>
           </div>
         </div>

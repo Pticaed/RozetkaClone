@@ -51,6 +51,28 @@ $blue: #86CBE9;
   }
 }
 
+@media screen and (width < 720px) {
+  .present-banner {
+    padding: 10px;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    .title {
+      display: none;
+    }
+
+    .image-container img {
+      max-height: 80%;
+    }
+  }
+}
+
+@media screen and (width <= 576px) {
+  #best-presents {
+    display: none;
+  }
+}
+
 .present-banner#pink {
   background-color: $pink;
   border-color: $pink;

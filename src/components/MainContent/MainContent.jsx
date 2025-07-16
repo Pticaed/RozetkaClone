@@ -1,4 +1,3 @@
-import {Button} from "react-bootstrap";
 import {ProductCard} from "./ProductCard.jsx";
 
 import "./MainContent.scss"
@@ -12,7 +11,7 @@ export function MainContent() {
     <>
       <section id="banner">
         <div className="container-fluid d-flex flex-column px-0" id="banner-container">
-          <Banner img="/resourses/maincontent/bannerSamsungGalaxy.png"/>
+          <Banner img="/resourses/maincontent/bannerSamsungGalaxy.png" maxWidth={1423}/>
           <Link id="show-all-sales" className="white-button btn btn-light" to="*">
             <p>Всі акції</p>
             <p className="light-gray">1036</p>
@@ -21,7 +20,7 @@ export function MainContent() {
       </section>
       <section id="sales">
         <div className="container-fluid d-flex flex-column px-0" id="sales-container">
-          <p className="fs-18 fw-bold pb-3">Акційні пропозиції</p>
+          <p className="section-caption">Акційні пропозиції</p>
           <div id="sales-grid-container" className="container-fluid px-0">
             <ProductCard
               id="p1" type="large-adaptive-product-card" img="/resourses/maincontent/asusVivobook.png"
@@ -59,13 +58,13 @@ export function MainContent() {
       </section>
       <section id="now-browsing">
         <div className="container-fluid d-flex flex-column px-0" id="now-browsing-container">
-          <p className="fs-18 fw-bold pb-3">Зараз шукають</p>
+          <p className="section-caption">Зараз шукають</p>
           <DefaultSwiper slides={data.products} slidesPerView={5}/>
         </div>
       </section>
       <section id="best-presents">
         <div className="container-fluid d-flex flex-column px-0" id="best-presents-container">
-          <p className="fs-18 fw-bold pb-3">Кращі подарунки</p>
+          <p className="section-caption">Кращі подарунки</p>
           <div className="container-fluid d-flex flex-row px-0 gap-2">
             <div className="present-banner" id="pink">
               <div className="description-container">
@@ -103,13 +102,13 @@ export function MainContent() {
       </section>
       <section id="recommendations">
         <div className="container-fluid d-flex flex-column px-0" id="recommendations-container">
-          <p className="fs-18 fw-bold pb-3">Рекомендації на основі ваших переглядів</p>
+          <p className="section-caption">Рекомендації на основі ваших переглядів</p>
           <DefaultSwiper slides={data.products} slidesPerView={5}/>
         </div>
       </section>
       <section id="most-awaited">
         <div className="container-fluid d-flex flex-column px-0" id="most-awaited-container">
-          <p className="fs-18 fw-bold pb-3">Найбільш очікуванні товари</p>
+          <p className="section-caption">Найбільш очікуванні товари</p>
           <div className="container-fluid px-0" id="most-awaited-grid-container">
             <ProductCard
               id="p1" type="large-adaptive-product-card" img="/resourses/maincontent/macbook.png"
@@ -134,6 +133,7 @@ export function MainContent() {
           </div>
         </div>
       </section>
+
     </>
   );
 }

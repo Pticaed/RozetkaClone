@@ -39,3 +39,25 @@
     margin-left: 24px;
   }
 }
+
+@media screen and (width <= 768px) {
+  #banner-container {
+    .arrow-right {
+      display: none !important;
+    }
+
+    .arrow-left {
+      display: none !important;
+    }
+
+    .white-button {
+      display: none !important;
+    }
+  }
+}
+
+@media screen and (width <= 640px) {
+  #banner-container .carousel-container {
+    margin: 0 auto;
+  }
+}

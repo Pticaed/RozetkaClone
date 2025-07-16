@@ -17,3 +17,27 @@
     grid-row: 1 / span 2;
   }
 }
+
+@media screen and (width <= 876px) {
+  #most-awaited-grid-container {
+    .large-adaptive-product-card {
+      .previous-price {
+        font-size: 14px;
+      }
+
+      .price {
+        font-size: 20px;
+      }
+
+      .large-currency-symbol {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (width <= 624px) {
+  #most-awaited {
+    display: none;
+  }
+}
