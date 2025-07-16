@@ -43,7 +43,7 @@ function PartLeftBarCatalog(props)
     return (
         <div id="partLeftBarCatalog">
             <img src={props.img}></img>
-            <Link to={props.to}>{props.text}</Link>
+            <Link to={props.to} onClick={props.event}>{props.text}</Link>
         </div>
     )
 }
@@ -190,7 +190,7 @@ export function Catalog(props)
                     <div id="divCatalog" className="d-flex">
                         <div id="leftDiv" className="default-block">
                             {leftBar.map((el,index) => (
-                                <PartLeftBarCatalog key={index} img={`/resourses/left-bar-main/${el[0]}.svg`} text={el[1]} to={`/categories/${el[0]}`} />
+                                <PartLeftBarCatalog key={index} img={`/resourses/left-bar-main/${el[0]}.svg`} text={el[1]} to={`/categories/${el[0]}`} event={() => props.setDialog(false)} />
                             ))}
                         </div>
                         <div id="rightDiv" className="default-block">

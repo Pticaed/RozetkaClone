@@ -120,11 +120,70 @@ $marginLogo: percentFromPx(116);
     cursor: pointer;
 }
 
+
+.mobileNavigation {
+    background-color: white;
+    bottom: 0;
+    position:fixed;
+    z-index: 9999;
+    left: 0;
+    gap: 40px;
+    display: none;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    will-change: transform;
+    pointer-events: auto;
+    touch-action: manipulation;
+    backface-visibility: hidden;
+    -webkit-overflow-scrolling: touch;
+    transform: translateZ(0);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+    p {
+        color: #74789F;
+        font-size: 11px;
+    }
+    .partMobileNav {
+
+        p {
+            font-size: 16px;
+        }
+        text-decoration: none;
+        vertical-align: middle;
+        text-align: center;
+    }
+}
+
 @media screen and (max-width: 768px){
     #tryPremiumButton, #burgerButton, #accButton, #mainNavBar > button {
         display: none;
     }
     #mainNavBar {
-        justify-content: left;
+        justify-content: space-between !important;
+        padding: 0 20px;
+        > * {
+            margin: 0 !important; 
+            padding: 0;
+        }
+        #searchBar {
+            margin: 0;
+            border-radius: 30px !important;
+            input {
+            border-radius: 30px;
+            }
+            #microphone {      
+                display: none;
+            }
+            button {
+                opacity: 0;
+                cursor: normal;
+                display: none;
+            }
+        }
+    }
+    .mobileNavigation {
+      display: flex !important;
     }
 }

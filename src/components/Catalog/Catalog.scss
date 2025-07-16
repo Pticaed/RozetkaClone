@@ -94,3 +94,27 @@
         color: black;
     }
 }
+
+@media screen and (max-width: 768px)
+{
+   .catalog {
+        width: 100%;
+        margin: 0 auto;
+        > * {
+            width: 100%;
+        }
+        .modal-content {
+            width: auto !important;
+        }
+        #rightDiv {
+            display: none;
+        }
+   }
+   #divCatalog {
+    margin: 0 auto;
+    display: flex;
+    width: auto !important;
+   }
+    
+}
+

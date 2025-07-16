@@ -9,3 +9,42 @@
 ::-webkit-scrollbar {
   display: none;
 }
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px){
+    #tryPremiumButton, #burgerButton, #accButton, #mainNavBar > button {
+        display: none;
+    }
+    #mainNavBar {
+        justify-content: space-between !important;
+        padding: 0 20px;
+        > * {
+            margin: 0 !important; 
+            padding: 0;
+        }
+        #searchBar {
+            margin: 0;
+            border-radius: 30px !important;
+            input {
+            border-radius: 30px;
+            }
+            #microphone {      
+                display: none;
+            }
+            button {
+                opacity: 0;
+                cursor: normal;
+                display: none;
+            }
+        }
+    }
+    .mobileNavigation {
+      display: flex !important;
+    }
+}
