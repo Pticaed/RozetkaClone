@@ -50,52 +50,55 @@ export function RightSideNavigation(props)
     const firstTwoSections = leftBarBottomList.slice(0,2).reverse();
     const dataComboBoxes = leftBarBottomList.slice(2,4);
     return (
+    <div id="rightSideNavigationWrapper">
         <nav id="rightSideNavigation" style={{display: props.display}}>
-            <div id="divRightSideNavigation">
-                <div id="divRightSideNavigation__head">
-                    <img src="/resourses/rightNav/cancelClose.svg" id="buttonCancel" onClick={() => props.setDisplay("none")}></img>
-                    <div id="AuthRegistrButtons">
-                        <img src="/resourses/nav/accButton.svg"></img>
-                        <div>
-                            <span>
-                                <Link onClick={() => props.setRegForm(true)}>Вхід</Link> | <Link onClick={() => props.setAuthForm(true)}>Рєстрація</Link>
-                            </span>
-                            <p>Авторизуйтесь для отримання розширених можливостей</p>
-                        </div>
-                    </div>
-                </div>
-                <div id="divRightSideNavigation__premiumAd">
-                    <div id="divRightSideNavigation__divPremiumAd">
-                        <p id="textPremiumAd">PREMIUM</p>
-                        <p id="descPremiumAd">Безкоштовна доставка весь рік</p>
-                    </div>
-                    <Link to="" id="arrowRightPremiumAd">
-                        <img src="/resourses/rightNav/arrowRight.svg"></img>
-                    </Link>
-                </div>
-                <div id="divRightSideNavigation__body">
-                    <div className="default-block partRightNav">
-                        <FirstPartBody class="catalogProduct" img="catalog.svg" text="Каталог товарів" />
-                        <FirstPartBody img="basket.svg" text="Кошик"/>
-                        <FirstPartBody img="question.svg" text="Довідковий центр" />
-                        <FirstPartBody img="tel.svg" text="+38 044 222 11 00" />
-                    </div>
-                    {firstTwoSections.map((el, index) => (
-                        <div key={index} className="default-block partRightNav divNavButtons">
-                            <h6 className="">{el[0]}</h6>
-                            <div className="">
-                                {el[1].map((el1, subIndex) => (
-                                    <LeftBarBottomItem key={subIndex} text={el1} />
-                                ))}
+                <div id="divRightSideNavigation">
+                    <div id="divRightSideNavigation__head">
+                        <img src="/resourses/rightNav/cancelClose.svg" id="buttonCancel" onClick={() => props.setDisplay("none")}></img>
+                        <div id="AuthRegistrButtons">
+                            <img src="/resourses/nav/accButton.svg"></img>
+                            <div>
+                                <span>
+                                    <Link onClick={() => props.setRegForm(true)}>Вхід</Link> | <Link onClick={() => props.setAuthForm(true)}>Рєстрація</Link>
+                                </span>
+                                <p>Авторизуйтесь для отримання розширених можливостей</p>
                             </div>
                         </div>
-                    ))}
-                    {dataComboBoxes.map((el,index) => (
-                        <ComboBoxNavBar el={el} key={index} />
-                    ))}
-                    <LeftBarDownloadAndSocial />
+                    </div>
+                    <div id="divRightSideNavigation__premiumAd">
+                        <div id="divRightSideNavigation__divPremiumAd">
+                            <p id="textPremiumAd">PREMIUM</p>
+                            <p id="descPremiumAd">Безкоштовна доставка весь рік</p>
+                        </div>
+                        <Link to="" id="arrowRightPremiumAd">
+                            <img src="/resourses/rightNav/arrowRight.svg"></img>
+                        </Link>
+                    </div>
+                    <div id="divRightSideNavigation__body">
+                        <div className="default-block partRightNav">
+                            <FirstPartBody class="catalogProduct" img="catalog.svg" text="Каталог товарів" />
+                            <FirstPartBody img="basket.svg" text="Кошик"/>
+                            <FirstPartBody img="question.svg" text="Довідковий центр" />
+                            <FirstPartBody img="tel.svg" text="+38 044 222 11 00" />
+                        </div>
+                        {firstTwoSections.map((el, index) => (
+                            <div key={index} className="default-block partRightNav divNavButtons">
+                                <h6 className="">{el[0]}</h6>
+                                <div className="">
+                                    {el[1].map((el1, subIndex) => (
+                                        <LeftBarBottomItem key={subIndex} text={el1} />
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                        {dataComboBoxes.map((el,index) => (
+                            <ComboBoxNavBar el={el} key={index} />
+                        ))}
+                        <LeftBarDownloadAndSocial />
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
+       
     )
 }
