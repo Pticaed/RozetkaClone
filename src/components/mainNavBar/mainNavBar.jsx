@@ -61,7 +61,7 @@ export function MainNavBar(props) {
                     </div>
                     <div id="buttonsNav">
                         <ButtonNav id="accButton" event={() => props.setDisplay("block")} img={path + "accButton.svg"} />
-                        <ButtonNav id="basket" event={props.openCart} img="/resourses/nav/basket.svg" /> {/* Изменено */}
+                        <ButtonNav id="basket" event={props.openCart} img="/resourses/nav/basket.svg" /> 
                     </div>
                 </nav>
             </header>
