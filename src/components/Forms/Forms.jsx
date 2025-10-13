@@ -2,8 +2,14 @@
 import { Modal, Button } from "react-bootstrap"
 import './Forms.scss'
 import { Link } from "react-router-dom"
-import { useState } from "react"
+import { useContext, useState } from "react"
+import AppContext from "../../features/context/AppContext"
+import Base64 from "../../app/shared/Base64"
 
+function Error()
+{
+    return <img src="/resourses/forms/error.svg"></img>
+}
 
 function Input(props)
 {
@@ -20,13 +26,15 @@ function Input(props)
         <div id="divOfInputForm">
             <div id="inputForm" style={validate.border}>
                 <input type="text" onChange={changeState} placeholder={props.placeholder}></input>
-                {!validate.isValid && <img src="/resourses/forms/error.svg"></img>}
+                {!validate.isValid && <Error/>}
                 {props.img && <img src={props.img} onClick={props.event}></img>}
             </div>
             {!validate.isValid && <p>{props.textInvalid}</p>}
         </div>
     )
 }
+
+
 
 function LogoText(props)
 {
@@ -38,7 +46,7 @@ function LogoText(props)
     )
 }
 
-function submitForm(user, validate, validateObjects, setValidateObjects)
+function submitForm(user, validate, validateObjects, setValidateObjects) // проверка валидации регистрационной формы
 {
     const valuesUser = Object.values(user);
     const valuesValidate = Object.values(validate);
@@ -46,7 +54,7 @@ function submitForm(user, validate, validateObjects, setValidateObjects)
 
     const clonValidateObjects = [...validateObjects]; // клон объекта с валидационными данными
 
-    for(let i = 0; i < valuesUser.length; i++)
+    for(let i = 0; i < valuesUser.length; i++) // проверка валидации у каждого объекта
     {
         const regex = new RegExp(valuesValidate[i])
         const isValid = regex.test(valuesUser[i]);
@@ -55,12 +63,22 @@ function submitForm(user, validate, validateObjects, setValidateObjects)
         clonValidateObjects[i] = {...clonValidateObjects[i], isValid: isValid, border: {...clonValidateObjects[i].border, borderColor: color} };
     }
     setValidateObjects(clonValidateObjects);
-    console.log(clonValidateObjects);
+    return checkValidation(clonValidateObjects);
 }
-
+function checkValidation(validateObjects) {
+    for(let i = 0; i < validateObjects.length; i++)
+    {
+        if(!validateObjects[i].isValid)
+        {
+            return false
+        }
+    }
+    return true;
+}
 export function FormRegistration({vision, setVision, setVisionOtherForm})
 {
-    const [user, setUser] = useState({name: "", surname: "", tel: "", email: "", pswrd: ""});
+    const [user, setUser] = useState({name: "", surname: "", tel: "", email: "", password: ""});
+    const { request } = useContext(AppContext);
     const validate = [
         "^[a-zA-Zа]{3,20}$",
         "^[a-zA-Z]{3,20}$",
@@ -68,6 +86,18 @@ export function FormRegistration({vision, setVision, setVisionOtherForm})
         "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
         "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[A-Za-z\\d]{6,}$"
     ]
+    const registration = () => {
+        const jsonUser = JSON.stringify(user);
+
+        request("/api/Users/Registration/", {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: jsonUser,
+        }).then(console.log)
+    }
+
     const [validateObjects, setValidateObjects] = useState(validate.map((pattern) => ({
         pattern,
         isValid: true,
@@ -82,7 +112,14 @@ export function FormRegistration({vision, setVision, setVisionOtherForm})
     return (
     <Modal className="formReg form modal-dialog-centered" onHide={() => setVision(false)} show={vision} backdrop={true} backdropClassName="form-backdrop">
         <Modal.Body className="" >
-            <form className="leftPartAuthForm" onSubmit={(e) => {e.preventDefault(); submitForm(user, validate, validateObjects, setValidateObjects)}}>
+            <form className="leftPartAuthForm" onSubmit={(e) => {
+                e.preventDefault(); 
+                const isValidForm = submitForm(user, validate, validateObjects, setValidateObjects)
+                if(isValidForm)
+                {
+                    registration();
+                }
+            }}>
                 <div>
                     <p>Реєстрація</p>
                     <div className="divInputsForm" >
@@ -90,7 +127,7 @@ export function FormRegistration({vision, setVision, setVisionOtherForm})
                             <Input key={i} state={user} setState={setUser} validate={validateObjects[i]} textInvalid={el[0]} nameElState={el[1]} placeholder={el[2]} />
                         ))}
                         <div>
-                            <Input state={user} setState={setUser} validate={validateObjects[validateObjects.length - 1]} nameElState="pswrd" placeholder="Придумайте пароль" img="/resourses/forms/passwordVision.svg"/>
+                            <Input state={user} setState={setUser} validate={validateObjects[validateObjects.length - 1]} nameElState="password" placeholder="Придумайте пароль" img="/resourses/forms/passwordVision.svg"/>
                             <p className="descForm">Пароль повинен складатися з не менш ніж 6 символів, містити цифри та латинські літери, у тому числі великі, і не повинен збігатися з ім'ям та ел. поштою</p>
                         </div>
                         
@@ -114,18 +151,58 @@ export function FormRegistration({vision, setVision, setVisionOtherForm})
     </Modal>
     )
 }
+function InputAuth(props)
+{
+    function changeState(e)
+    {
+        props.setState({...props.state, [`${props.nameElState}`]: e.target.value});
+    }
+    return (
+        <div id="divOfInputForm">
+            <div id="inputForm">
+                <input type="text" onChange={changeState}  placeholder={props.placeholder}></input>
+                {props.validate == false && <Error/>}
+                {props.img && <img src={props.img} onClick={props.event}></img>}
+            </div>
+            {!props.validate && <p>{props.textInvalid}</p>}
+        </div>
+    )
+}
 export function FormAuthorization({vision, setVision, setVisionOtherForm})
 {
-    const [user, setUser] = useState({emailOrTel: "", pswrd: ""});
+    const { request, setToken, token } = useContext(AppContext);
+    const [user, setUser] = useState({emailOrTel: "", password: ""});
+    const [isValid, setIsValid] = useState(true);
+    const authorization = () => {
+        console.log("hello")
+        const userPass = `${user.emailOrTel}:${user.password}`;
+        const credentials = Base64.encode(userPass);
+        request("/api/Users/jwt", {
+            method: 'GET',
+            headers: {
+                'Authorization': `Basic ${credentials}`
+            },
+        }).then(jwt => {
+            setIsValid(true);
+            setToken(jwt);
+            setVision(false)
+        }).catch(error => {
+            setIsValid(false);
+        })
+    }
     return (
         <Modal className="form modal-dialog-centered" onHide={() => setVision(false)} show={vision} backdrop={true}>
             <Modal.Body className="">
-                <form className="leftPartAuthForm">
-                    
+                <form className="leftPartAuthForm" id="authForm" onSubmit={(e) => 
+                    {
+                        e.preventDefault();
+                        console.log(user); 
+                        authorization();
+                    }}>
                         <p>Вхід</p>
                         <div className="divInputsForm">
-                            <Input state={user} setState={setUser} nameElState="emailOrTel" placeholder="Ел. пошта або телефон"/>
-                            <Input state={user} setState={setUser} nameElState="pswrd" placeholder="Пароль" img="/resourses/forms/passwordVision.svg"/>
+                            <InputAuth state={user} setState={setUser} validate={isValid} nameElState="emailOrTel" placeholder="Ел. пошта або телефон" textInvalid="Введено невірну адресу ел. пошти або номер телефону"/> 
+                            <InputAuth state={user} setState={setUser} nameElState="password" placeholder="Пароль" img="/resourses/forms/passwordVision.svg"/>
                             <div className="divForgotPassword">
                                 <label>
                                     <input type="checkbox"></input>
@@ -135,7 +212,7 @@ export function FormAuthorization({vision, setVision, setVisionOtherForm})
                             </div>
                             
                         </div>
-                    <Button className="btn btn-success">Увійти</Button>
+                    <Button type="submit" className="btn btn-success">Увійти</Button>
                     
                     <p className="registrButton" onClick={() => {setVision(false); setVisionOtherForm(true)}}>Зареєструватися</p>
                 </form>

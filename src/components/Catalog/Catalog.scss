@@ -1,6 +1,6 @@
 @use "../DefaultBlock.scss";
 @function percentFromPx($px) {
-  @return ($px * 100 / 1920) * 1%;
+  @return calc($px * 100 / 1920) * 1%;
 }
 #divCatalog {
     z-index: 1051;
@@ -43,11 +43,11 @@
     #partLeftBarCatalog {
         margin: 8px 0;
         margin-left: 16px;
+        white-space: nowrap;
         * {
             vertical-align: middle;
             display: inline-block;
         }
-        white-space: nowrap;
         a {
             text-decoration: none;
             color: black;

@@ -1,5 +1,5 @@
 @function percentFromPx($px) {
-  @return ($px * 100 / 1920) * 1%;
+  @return calc($px * 100 / 1920) * 1%;
 }
 $marginLogo: percentFromPx(116);
 
@@ -111,7 +111,8 @@ $marginLogo: percentFromPx(116);
 }
 
 #buttonsNav {
-    margin-left: percentFromPx(130);
+    
+    margin-left: percentFromPx(20);
     white-space: nowrap;
 }
 

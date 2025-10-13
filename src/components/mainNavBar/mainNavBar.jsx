@@ -2,7 +2,8 @@ import "./mainNavBar.scss"
 import { Link } from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Catalog } from "../Catalog/Catalog";
-
+import AppContext from "../../features/context/AppContext";
+import { useContext } from "react";
 
 function ImgLink(props)
 {
@@ -40,6 +41,7 @@ function PartMenu(props)
 export function MainNavBar(props)
 {
     const path = "/resourses/nav/"
+    const { token, setToken } = useContext(AppContext);
     return (
         <>
             <div className="mobileNavigation">
@@ -61,7 +63,9 @@ export function MainNavBar(props)
                     </div>
                     <div id="buttonsNav">
                         <ButtonNav id="accButton" event={() => props.setDisplay("block")} img={path + "accButton.svg"}/>
-                        <ButtonNav id="basket"event={null} img="/resourses/nav/basket.svg"/>
+                        
+                        {token && <ButtonNav id="liked" event={null} img={path + "/liked.svg"} />}
+                        <ButtonNav id="basket"event={null} img={path + "/basket.svg"}/>
                     </div>
                 </nav>
             </header>
