@@ -7,6 +7,10 @@ import {MainPage} from "./components/MainPage/MainPage.jsx";
 import { ErrorPage } from './components/ErrorPage/ErrorPage.jsx';
 import AppContext from './features/context/AppContext.jsx'
 import Base64 from './app/shared/Base64.js'
+import CreateBrand from './components/AdminComponents/CreateBrand/CreateBrand.jsx'
+import CreateProduct from './components/AdminComponents/CreateProduct/CreateProduct.jsx'
+import CreateProductGroup from './components/AdminComponents/CreateProductGroup/CreateProductGroup.jsx'
+import CombineAdminComponents from './components/AdminComponents/CombineComponents/CombineAdminComponents.jsx'
 
 function App() {
   const [user, setUser] = useState(null);
@@ -30,6 +34,7 @@ function App() {
         }
       }
     }
+    
     fetch(url, conf)
         .then(r => r.json())
         .then(j => {
@@ -64,7 +69,6 @@ function App() {
     }
   }, [token]);
 
-
   return (
     <AppContext.Provider value={ { request, backUrl, setToken, token }}>
     <BrowserRouter>
@@ -76,8 +80,9 @@ function App() {
               path={`/categories/${el[0]}`}
               element={el[2] === null ? <ErrorPage/> : el[2]}
               errorElement={<ErrorPage/>}/>
-          ))}
+          ))}/
           <Route path="*" element={<ErrorPage />} />
+          <Route path="AdminComponents" element={<CombineAdminComponents /> } />
         </Route>
       </Routes>
     </BrowserRouter>
